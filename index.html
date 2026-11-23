@@ -1,635 +1,1001 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stephenson Wilcox &amp; Associates | Land Survey Palm Coast &amp; Flagler County</title>
-  <meta name="description" content="Family-owned land surveying in Palm Coast, Bunnell, and Flagler County, FL. Boundary surveys, Elevation Certificates, ALTA/NSPS, Topographic, and Construction Staking." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LandSurveyor",
-    "name": "Stephenson Wilcox & Associates",
-    "telephone": "+1-386-437-2363",
-    "email": "info.swa@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "2729 E Moody Blvd #400",
-      "addressLocality": "Bunnell",
-      "addressRegion": "FL",
-      "postalCode": "32110",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.4772,
-      "longitude": -81.2241
-    },
-    "areaServed": ["Palm Coast", "Bunnell", "Flagler Beach", "Flagler County"],
-    "openingHours": "Mo-Fr 08:00-17:00"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do I need a survey to build a fence in Palm Coast?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Both the City of Palm Coast and Flagler County generally require a current boundary survey before issuing a fence permit. A property line survey shows your exact lot corners, easements, and setback lines so your contractor does not accidentally place a fence on a neighbor's land or inside a city utility easement."
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stephenson Wilcox &amp; Associates | Land Survey Palm Coast &amp; Flagler County</title>
+<meta name="description" content="Stephenson Wilcox & Associates (SWA) — trusted land survey in Palm Coast & Flagler County. Boundary survey Flagler County, elevation certificate, ALTA/NSPS, topographic surveys, construction staking. Family-owned. Call (386) 437-2363.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Stephenson Wilcox & Associates | Land Survey Palm Coast">
+<meta property="og:description" content="Family-owned land surveying in Palm Coast & Flagler County. Boundary surveys, elevation certificates, ALTA/NSPS, topographic surveys and construction staking.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%232563EB' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%230F172A'/%3E%3Cpath d='M16 3v7M16 22v7M3 16h7M22 16h7' stroke='%230F172A' stroke-width='3'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LandSurveyor",
+      "@id": "#swa",
+      "name": "Stephenson Wilcox & Associates",
+      "alternateName": "SWA",
+      "description": "Family-owned land surveying firm in Bunnell, FL providing boundary surveys, elevation certificates, ALTA/NSPS land title surveys, topographic surveys, construction staking, and subdivision and site planning in Palm Coast and Flagler County.",
+      "telephone": "+1-386-437-2363",
+      "email": "info.swa@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2729 E Moody Blvd #400",
+        "addressLocality": "Bunnell",
+        "addressRegion": "FL",
+        "postalCode": "32110",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Question",
-        "name": "What is an Elevation Certificate and why do I need one?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An Elevation Certificate is an official FEMA form completed by a licensed Florida land surveyor. It documents the height of your home's lowest floor compared to the Base Flood Elevation. Insurance companies and Flagler County permitting offices use this certificate to calculate accurate flood insurance premiums and verify safe building heights."
-        }
+      "geo": { "@type": "GeoCoordinates", "latitude": 29.4671, "longitude": -81.2568 },
+      "areaServed": [
+        { "@type": "City", "name": "Palm Coast, FL" },
+        { "@type": "City", "name": "Bunnell, FL" },
+        { "@type": "City", "name": "Flagler Beach, FL" },
+        { "@type": "AdministrativeArea", "name": "Flagler County, FL" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Land Surveying Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property Line Survey (Boundary Survey)", "areaServed": "Flagler County, FL" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Elevation Certificates for Flood Insurance", "areaServed": "Flagler County, FL" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ALTA/NSPS Land Title Surveys", "areaServed": "Flagler County, FL" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Topographic Surveys", "areaServed": "Flagler County, FL" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction Staking", "areaServed": "Flagler County, FL" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Subdivisions & Site Planning", "areaServed": "Flagler County, FL" } }
+        ]
       }
-    ]
-  }
-  </script>
-  <style>
-    html { font-size: 18px; scroll-behavior: smooth; }
-    body { font-family: 'Atkinson Hyperlegible', 'Inter', system-ui, sans-serif; color: #0F172A; background: #FFFFFF; line-height: 1.65; }
-    .fade-in { animation: fadeIn 0.35s ease-out both; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-  </style>
-</head>
-<body class="bg-white text-[#0F172A] antialiased">
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I need a survey to build a fence in Palm Coast?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. A fence built over a property line or into an easement can lead to disputes, fines, or being required to move the fence at your cost. A boundary survey marks your exact property lines and corners so your fence goes in the right place the first time. Many fence companies in Palm Coast ask for a survey before they start, and a survey also helps with permits. Stephenson Wilcox & Associates can mark your lines clearly so your fence company can build with confidence." } },
+        { "@type": "Question", "name": "What is an elevation certificate?", "acceptedAnswer": { "@type": "Answer", "text": "An elevation certificate is an official FEMA document prepared by a licensed surveyor. It records how high your home sits compared to the expected flood level for your property, called the base flood elevation. Insurance companies use it to set your flood insurance premium, and lenders may require it before closing. If your home sits higher than the flood level, the certificate can help lower your premium. Stephenson Wilcox & Associates prepares elevation certificates throughout Palm Coast and Flagler County." } },
+        { "@type": "Question", "name": "How long does a boundary survey take?", "acceptedAnswer": { "@type": "Answer", "text": "Most residential boundary surveys in Flagler County are completed within one to two weeks from the day you order, depending on our schedule, the size of the property, and how much research the parcel requires. Very wooded lots or older properties with missing records can take a little longer. When you call, we will give you a clear time estimate up front and keep you updated. If you have a closing deadline, tell us right away so we can plan around it." } },
+        { "@type": "Question", "name": "How much does a land survey cost in Flagler County?", "acceptedAnswer": { "@type": "Answer", "text": "The cost of a survey depends on the type of survey, the size and shape of the property, vegetation, and how complete the existing records are. A small, clear residential lot costs less than a large or heavily wooded parcel. Because every property is different, we quote each job individually so you only pay for the work your land actually needs. Call Stephenson Wilcox & Associates at (386) 437-2363 and we will give you a straightforward price for your property with no obligation." } },
+        { "@type": "Question", "name": "What is a boundary survey, and when do I need one?", "acceptedAnswer": { "@type": "Answer", "text": "A boundary survey establishes the exact property lines and corners of your land, based on your deed, recorded plats, and markers found in the field. You typically need one before building a fence, pool, or addition, when buying or selling property, when settling a line dispute with a neighbor, or when splitting land. The surveyor sets or flags your corners and provides a signed survey drawing you can rely on for permits, closings, and construction." } },
+        { "@type": "Question", "name": "What is an ALTA/NSPS land title survey?", "acceptedAnswer": { "@type": "Answer", "text": "An ALTA/NSPS land title survey is a detailed survey prepared to national standards set by the American Land Title Association and the National Society of Professional Surveyors. It is usually ordered for commercial property purchases, larger land deals, and lender or title company requirements. It shows boundaries, improvements, easements, encroachments, and access in far more detail than a standard survey. Stephenson Wilcox & Associates prepares ALTA/NSPS surveys for attorneys, lenders, and title companies across Flagler County." } },
+        { "@type": "Question", "name": "What is a topographic survey used for?", "acceptedAnswer": { "@type": "Answer", "text": "A topographic survey maps the shape of the land: elevations, slopes, drainage patterns, trees, and existing features such as buildings, driveways, and utilities. Architects and engineers use it to design homes, sites, septic systems, and drainage that work with the land instead of against it. In low-lying parts of Flagler County, good elevation data also helps with flood planning and permitting. The result is an accurate map your design team can build from." } },
+        { "@type": "Question", "name": "What is construction staking?", "acceptedAnswer": { "@type": "Answer", "text": "Construction staking transfers the design from paper plans onto the ground. Our field crews place stakes and marks that show builders exactly where to put foundations, walls, driveways, utilities, and roads, at the correct position and elevation. Accurate staking prevents expensive mistakes, failed inspections, and rebuilds. Stephenson Wilcox & Associates provides construction staking for home builders, site contractors, and developers throughout Palm Coast and Flagler County, from single homes to full subdivisions." } },
+        { "@type": "Question", "name": "My property corner markers are missing. Can you find them?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Missing or buried corner markers are very common in Flagler County, especially on older lots. Using your deed, the recorded plat, and markers on neighboring properties, we retrace your boundaries and reset your corners with new, durable markers. We then flag them clearly so you, your fence company, or your builder can see exactly where your lines are. A boundary survey also gives you a signed drawing that documents the corners for your records." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --navy:#0F172A; --navy2:#1E293B; --blue:#2563EB; --blue-dark:#1D4ED8;
+  --sky:#EFF6FF; --ink:#0F172A; --muted:#475569; --line:#E2E8F0;
+  --bg:#FFFFFF; --card:#FFFFFF; --radius:16px;
+  --shadow:0 10px 30px rgba(15,23,42,.08);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+img,svg,canvas{max-width:100%}
+a{color:var(--blue)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+h1{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.12;letter-spacing:-.02em;color:var(--navy)}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.2;color:var(--navy);letter-spacing:-.01em}
+h3{font-size:1.22rem;color:var(--navy)}
+section{padding:72px 0}
+.eyebrow{display:inline-block;font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:44rem}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:14px 28px;border-radius:12px;
+  font-size:1.05rem;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:active{transform:scale(.98)}
+.btn-call{background:var(--blue);color:#fff}
+.btn-call:hover{background:var(--blue-dark)}
+.btn-outline{background:#fff;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--sky)}
+.btn-white{background:#fff;color:var(--navy)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 
-  <!-- Preview Mode Switcher (Public Site vs Easy Owner Admin) -->
-  <div class="bg-slate-900 text-white px-4 py-2.5 text-sm sm:text-base border-b border-slate-700">
-    <div class="mx-auto max-w-6xl flex flex-wrap items-center justify-between gap-3">
-      <span class="font-semibold text-slate-200">SWA Interactive Preview</span>
-      <div class="flex gap-2">
-        <button id="tab-public" type="button" class="rounded-lg px-4 py-1.5 font-bold bg-[#2563EB] text-white">Public Website</button>
-        <button id="tab-admin" type="button" class="rounded-lg px-4 py-1.5 font-bold bg-slate-700 text-slate-200 hover:bg-slate-600">Owner Admin (/admin)</button>
+/* Announcement banner */
+#banner{display:none;background:var(--navy);color:#fff;text-align:center;padding:14px 20px;font-weight:600}
+#banner.on{display:block}
+#banner a{color:#93C5FD}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.header-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);margin-right:auto}
+.brand img{width:52px;height:52px;object-fit:contain;border-radius:10px}
+.brand .mark{width:52px;height:52px;flex:0 0 52px}
+.brand-name{font-weight:800;font-size:1.12rem;line-height:1.2}
+.brand-sub{font-size:.82rem;color:var(--muted);font-weight:600;letter-spacing:.04em}
+nav.main{display:flex;gap:6px;flex-wrap:wrap}
+nav.main a{color:var(--navy);text-decoration:none;font-weight:600;padding:10px 14px;border-radius:10px;font-size:1.02rem}
+nav.main a:hover{background:var(--sky)}
+header .btn{min-height:52px;padding:12px 22px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#F8FAFC 0%,#EFF6FF 100%);padding:84px 0 76px}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9}
+.hero-in{position:relative;z-index:2;max-width:46rem}
+.hero .sub{font-size:1.3rem;color:var(--navy2);font-weight:600;margin:18px 0 8px}
+.hero p.desc{color:var(--muted);max-width:38rem;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.trust{display:flex;gap:10px;flex-wrap:wrap}
+.trust span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.92rem;font-weight:600;color:var(--navy);box-shadow:var(--shadow)}
+
+/* Services */
+.services{background:#fff;padding-top:64px}
+.sec-head{max-width:44rem;margin-bottom:38px}
+.sec-head p{color:var(--muted);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}
+.card .icon{width:60px;height:60px;border-radius:14px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:1rem}
+.card ul{margin:14px 0 0 20px;color:var(--navy2);font-size:1rem}
+.card ul li{margin:5px 0}
+
+/* Ask SWA */
+.ask{background:var(--navy);color:#fff}
+.ask h2{color:#fff}
+.ask .lead{color:#CBD5E1}
+.ask-box{background:#fff;color:var(--ink);border-radius:var(--radius);padding:28px;max-width:46rem;box-shadow:var(--shadow)}
+.ask-row{display:flex;gap:12px;flex-wrap:wrap}
+.ask-row input{flex:1 1 320px;min-height:56px;font-size:1.05rem;padding:12px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit}
+.ask-answer{display:none;margin-top:18px;background:var(--sky);border-left:5px solid var(--blue);border-radius:10px;padding:16px 18px;font-size:1.03rem}
+.ask-answer.on{display:block}
+.ask-fallback{margin-top:16px;color:var(--navy2);font-size:1.02rem}
+.ask-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.ask-chips button{background:#fff;border:2px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.95rem;font-weight:600;cursor:pointer;font-family:inherit;color:var(--navy)}
+.ask-chips button:hover{border-color:var(--blue);color:var(--blue)}
+
+/* Projects */
+.projects{background:#F8FAFC}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.pcard .ph{aspect-ratio:4/3;background:var(--sky);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pcard .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.pcard .ph svg{width:100%;height:100%}
+.pcard .pb{padding:20px 22px}
+.pcard h3{margin-bottom:6px}
+.pcard p{color:var(--muted);font-size:.99rem}
+
+/* About / hours */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.hours-card{background:var(--sky);border-radius:var(--radius);padding:28px;border:1px solid #DBEAFE}
+.hours-card h3{margin-bottom:12px}
+.hours-card li{list-style:none;padding:7px 0;border-bottom:1px dashed #BFDBFE;font-size:1.02rem}
+.hours-card li:last-child{border-bottom:none}
+
+/* FAQ */
+.faq{background:#F8FAFC}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:14px;box-shadow:var(--shadow);overflow:hidden}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.08rem;color:var(--navy);padding:22px 26px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{flex:0 0 auto;transition:transform .2s ease;color:var(--blue);font-size:1.3rem;line-height:1}
+.faq details[open ] summary .chev{transform:rotate(45deg)}
+.faq .a{padding:0 26px 24px;color:var(--navy2);max-width:52rem}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+form.req{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+form.req label{display:block;font-weight:700;margin:16px 0 7px;color:var(--navy)}
+form.req label:first-of-type{margin-top:0}
+form.req input,form.req textarea{width:100%;font-size:1.05rem;padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit;background:#fff}
+form.req input:focus,form.req textarea:focus{border-color:var(--blue);outline:none}
+form.req .btn{width:100%;justify-content:center;margin-top:22px}
+.form-note{margin-top:14px;font-size:.95rem;color:var(--muted)}
+.form-sent{display:none;background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;border-radius:12px;padding:16px 18px;margin-top:18px;font-weight:600}
+.form-sent.on{display:block}
+.contact-card{background:var(--navy);color:#fff;border-radius:var(--radius);padding:30px}
+.contact-card h3{color:#fff;margin-bottom:14px}
+.contact-card p{margin:10px 0;color:#E2E8F0}
+.contact-card a{color:#93C5FD;font-weight:700;text-decoration:none}
+.contact-card .big{font-size:1.35rem;font-weight:800;color:#fff}
+.mapbox{margin-top:20px;border-radius:12px;overflow:hidden;border:1px solid #334155}
+.mapbox svg{display:block;width:100%;height:auto}
+
+/* Footer */
+footer.site{background:var(--navy);color:#CBD5E1;padding:52px 0 34px}
+footer.site .cols{display:flex;gap:34px;flex-wrap:wrap;justify-content:space-between}
+footer.site h3{color:#fff;margin-bottom:10px}
+footer.site a{color:#93C5FD;text-decoration:none}
+footer.site .fine{border-top:1px solid #1E293B;margin-top:34px;padding-top:20px;font-size:.92rem;color:#94A3B8;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* Admin */
+#adminBtn{position:fixed;right:18px;bottom:18px;z-index:80;background:var(--navy);color:#fff;border:none;border-radius:999px;
+  padding:14px 22px;font-size:.98rem;font-weight:700;cursor:pointer;box-shadow:0 12px 30px rgba(15,23,42,.35);font-family:inherit}
+#adminPanel{position:fixed;inset:0;z-index:90;display:none;background:rgba(15,23,42,.55);overflow:auto;padding:22px 14px}
+#adminPanel.on{display:block}
+.admin-card{background:#fff;max-width:760px;margin:0 auto;border-radius:18px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.admin-card h2{margin-bottom:6px}
+.admin-card .hint{color:var(--muted);font-size:.97rem;margin-bottom:8px}
+.admin-card fieldset{border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:20px}
+.admin-card legend{font-weight:800;color:var(--navy);padding:0 8px}
+.admin-card label{display:block;font-weight:700;font-size:.95rem;margin:14px 0 6px;color:var(--navy)}
+.admin-card label:first-of-type{margin-top:0}
+.admin-card input[type=text],.admin-card input[type=email],.admin-card textarea{width:100%;font-size:1rem;padding:12px 14px;border:2px solid var(--line);border-radius:10px;font-family:inherit}
+.admin-card textarea{min-height:74px;resize:vertical}
+.switchrow{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy)}
+.switchrow input{width:24px;height:24px;accent-color:var(--blue)}
+.admin-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.admin-actions .btn{min-height:52px}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--navy)}
+.btn-danger{background:#fff;border-color:#FCA5A5;color:#B91C1C}
+.proj-edit{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px}
+.proj-edit img,.proj-edit .thumb{width:84px;height:64px;object-fit:cover;border-radius:8px;flex:0 0 84px;background:var(--sky)}
+.proj-edit .fields{flex:1}
+.proj-edit input{margin-bottom:8px}
+.proj-edit textarea{min-height:52px}
+.filebtn{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--navy);border:2px dashed #93C5FD;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer;margin-top:6px}
+.admin-status{display:none;margin-top:16px;background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;border-radius:10px;padding:12px 16px;font-weight:600}
+.admin-status.on{display:block}
+@media(max-width:640px){
+  section{padding:54px 0}
+  .header-in{gap:10px}
+  header .btn{width:100%;justify-content:center}
+  .brand{margin-right:0}
+  nav.main{order:3;width:100%}
+  nav.main a{flex:1;text-align:center;background:var(--sky)}
+}
+</style>
+</head>
+<body>
+
+<div id="banner" role="status"></div>
+
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Stephenson Wilcox and Associates home">
+      <span id="logoSlot">
+        <svg class="mark" viewBox="0 0 64 64" role="img" aria-label="SWA survey mark logo"><circle cx="32" cy="30" r="17" fill="none" stroke="#2563EB" stroke-width="4"/><circle cx="32" cy="30" r="4.5" fill="#0F172A"/><path d="M32 6v10M32 44v8M8 30h10M46 30h10" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/><path d="M24 52 L32 44 L40 52" fill="none" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">Stephenson Wilcox &amp; Associates</span><br>
+        <span class="brand-sub">LAND SURVEYING &bull; BUNNELL &amp; PALM COAST, FL</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <a class="btn btn-call" data-tel href="tel:+13864372363">Call Now: <span data-phone>(386) 437-2363</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <span class="eyebrow" data-bind="heroEyebrow">Precision Land Surveying &amp; Site Architecture</span>
+      <h1 data-bind="heroTitle">Trusted Land Surveying in Palm Coast &amp; Flagler County.</h1>
+      <p class="sub" data-bind="heroSub">Family-owned. Accurate. Easy to work with.</p>
+      <p class="desc">Stephenson Wilcox &amp; Associates is a legacy land surveying firm based in Bunnell, Florida, serving Palm Coast and all of Flagler County. Clear answers, careful field work, and surveys you can build on.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-call" href="#contact">Request a Survey</a>
+        <a class="btn btn-outline" href="#projects">View Projects</a>
+      </div>
+      <div class="trust" aria-label="Highlights">
+        <span>Family-Owned &amp; Local</span>
+        <span>Palm Coast &bull; Bunnell &bull; Flagler Beach</span>
+        <span>Residential &amp; Commercial</span>
       </div>
     </div>
   </div>
 
-  <!-- PUBLIC SPA VIEW -->
-  <div id="view-public">
-    <!-- Header: Logo Left, Large Call Now Right (No hidden menus) -->
-    <header class="sticky top-0 z-40 border-b-2 border-slate-200 bg-white">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <a href="#top" class="flex items-center gap-3 focus:outline-none">
-          <div id="live-logo-wrap" class="shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="h-12 w-12" role="img" aria-label="SWA Logo">
-              <rect width="64" height="64" rx="12" fill="#0F172A"/>
-              <path d="M32 12L48 50H40L32 30L24 50H16L32 12Z" fill="#FFFFFF"/>
-              <circle cx="32" cy="24" r="5" fill="#2563EB"/>
-              <line x1="12" y1="54" x2="52" y2="54" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <!-- SERVICES -->
+  <section class="services" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2 id="services-h">Land Surveying Services in Palm Coast &amp; Flagler County</h2>
+        <p>Services are the heart of what we do. Every job is handled by our local team, explained in plain language, and delivered signed and ready to use.</p>
+      </div>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M2 20h20"/><path d="M9 20v-6h6v6"/></svg></div>
+          <h3>Property Line Survey (Boundary Survey)</h3>
+          <p>Know exactly where your land begins and ends. A boundary survey in Flagler County confirms your property lines and corners before you build, buy, or sell.</p>
+          <ul><li>Property corners found, set &amp; flagged</li><li>For fences, pools, additions &amp; closings</li><li>Signed survey drawing included</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M2 12c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M12 2v7"/><path d="M8 6l4-4 4 4"/></svg></div>
+          <h3>Elevation Certificates (For Flood Insurance)</h3>
+          <p>An elevation certificate documents how high your home sits versus the flood level. Lenders require it, and it can lower your flood insurance premium.</p>
+          <ul><li>Official FEMA elevation certificate</li><li>For lenders, insurers &amp; closings</li><li>Fast turnaround in Flagler County</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></div>
+          <h3>ALTA/NSPS Land Title Surveys</h3>
+          <p>Detailed surveys built to national ALTA/NSPS standards for commercial purchases, lenders, and title companies that need the complete picture.</p>
+          <ul><li>Boundaries, easements &amp; encroachments</li><li>Improvements &amp; access documented</li><li>Trusted by attorneys &amp; title companies</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><path d="M3 19l5-6 4 3 5-7 4 5"/><path d="M3 21h18"/><circle cx="8" cy="13" r="1" fill="#2563EB"/><circle cx="17" cy="9" r="1" fill="#2563EB"/></svg></div>
+          <h3>Topographic Surveys</h3>
+          <p>An accurate map of your land&rsquo;s elevations, slopes, drainage, and features, so architects and engineers can design with confidence.</p>
+          <ul><li>Elevations, contours &amp; drainage</li><li>Trees, structures &amp; utilities located</li><li>For design, septic &amp; permitting</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><path d="M12 21V8"/><path d="M12 8l7-2v6l-7 2"/><path d="M5 21h14"/><path d="M8 21v-4M16 21v-4"/></svg></div>
+          <h3>Construction Staking</h3>
+          <p>We transfer your plans onto the ground with precise stakes and marks, so foundations, utilities, and roads land exactly where they belong.</p>
+          <ul><li>Foundations, walls &amp; driveways</li><li>Utilities, roads &amp; site work</li><li>Single homes to full subdivisions</li></ul>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></div>
+          <h3>Subdivisions &amp; Site Planning</h3>
+          <p>From splitting one parcel to planning a full subdivision, we handle the surveying and layout groundwork your project is approved on.</p>
+          <ul><li>Lot splits &amp; parcel combinations</li><li>Subdivision platting support</li><li>Site layout &amp; planning surveys</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASK SWA -->
+  <section class="ask" id="ask" aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow" style="color:#93C5FD">Quick Answers</span>
+        <h2 id="ask-h">Have a question? Ask our assistant.</h2>
+        <p class="lead">Type a question about land surveying in Palm Coast and get a simple answer right away. For prices, scheduling, or anything complex, we will point you straight to our office.</p>
+      </div>
+      <div class="ask-box reveal">
+        <form class="ask-row" id="askForm">
+          <label class="sr" for="askInput" style="position:absolute;left:-9999px">Ask a surveying question</label>
+          <input id="askInput" type="text" placeholder="Example: Do I need a survey to build a fence?" autocomplete="off">
+          <button class="btn btn-call" type="submit">Ask SWA</button>
+        </form>
+        <div class="ask-chips" aria-label="Popular questions">
+          <button type="button" data-q="Do I need a survey to build a fence?">Fence survey</button>
+          <button type="button" data-q="What is an elevation certificate?">Elevation certificate</button>
+          <button type="button" data-q="How long does a boundary survey take?">How long it takes</button>
+          <button type="button" data-q="How much does a survey cost?">Survey cost</button>
+          <button type="button" data-q="My corner markers are missing">Missing corner markers</button>
+        </div>
+        <div class="ask-answer" id="askAnswer" role="status"></div>
+        <p class="ask-fallback">Prefer to talk? Call <a data-tel href="tel:+13864372363"><strong data-phone>(386) 437-2363</strong></a> or email <a data-mail href="mailto:info.swa@gmail.com"><strong data-email>info.swa@gmail.com</strong></a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects" aria-labelledby="projects-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Our Work</span>
+        <h2 id="projects-h">Recent Flagler County Projects</h2>
+        <p>A look at the kind of work our crews do every week across Palm Coast, Bunnell, and Flagler Beach. The owner can replace these illustrations with real project photos anytime using the Owner Admin button below.</p>
+      </div>
+      <div class="pgrid" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT + HOURS -->
+  <section id="about" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About SWA</span>
+        <h2 id="about-h">A Legacy Flagler County Surveying Firm</h2>
+        <p style="margin-top:14px;color:var(--muted)" data-bind="aboutText">Stephenson Wilcox &amp; Associates has served Flagler County property owners, builders, realtors, and attorneys for years from our office in Bunnell. We are family-owned, which means when you call, you talk to people who know your neighborhood, your plat, and your project. We keep our process simple: clear prices, careful field work, honest timelines, and a signed survey you can rely on for permits, closings, and construction.</p>
+        <div class="hero-ctas" style="margin-top:26px">
+          <a class="btn btn-call" data-tel href="tel:+13864372363">Call <span data-phone>(386) 437-2363</span></a>
+          <a class="btn btn-outline" href="#contact">Contact Us</a>
+        </div>
+      </div>
+      <div class="hours-card reveal">
+        <h3>Office Hours</h3>
+        <ul id="hoursList"></ul>
+        <p style="margin-top:14px;color:var(--muted);font-size:.97rem">Field crews are out across Flagler County daily. If we miss your call, leave a message and we will call you back the same business day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Good To Know</span>
+        <h2 id="faq-h">Common Surveying Questions</h2>
+        <p>Straight answers to the questions Palm Coast and Flagler County property owners ask us most.</p>
+      </div>
+      <div class="reveal">
+        <details><summary>Do I need a survey to build a fence in Palm Coast?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>In most cases, yes. A fence built over a property line or into an easement can lead to disputes, fines, or being required to move the fence at your cost. A boundary survey marks your exact property lines and corners so your fence goes in the right place the first time. Many fence companies in Palm Coast ask for a survey before they start, and a survey also helps with permits. Stephenson Wilcox &amp; Associates can mark your lines clearly so your fence company can build with confidence.</p></div></details>
+        <details><summary>What is an elevation certificate?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>An elevation certificate is an official FEMA document prepared by a licensed surveyor. It records how high your home sits compared to the expected flood level for your property, called the base flood elevation. Insurance companies use it to set your flood insurance premium, and lenders may require it before closing. If your home sits higher than the flood level, the certificate can help lower your premium. Stephenson Wilcox &amp; Associates prepares elevation certificates throughout Palm Coast and Flagler County.</p></div></details>
+        <details><summary>How long does a boundary survey take?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>Most residential boundary surveys in Flagler County are completed within one to two weeks from the day you order, depending on our schedule, the size of the property, and how much research the parcel requires. Very wooded lots or older properties with missing records can take a little longer. When you call, we will give you a clear time estimate up front and keep you updated. If you have a closing deadline, tell us right away so we can plan around it.</p></div></details>
+        <details><summary>How much does a land survey cost in Flagler County?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>The cost of a survey depends on the type of survey, the size and shape of the property, vegetation, and how complete the existing records are. A small, clear residential lot costs less than a large or heavily wooded parcel. Because every property is different, we quote each job individually so you only pay for the work your land actually needs. Call Stephenson Wilcox &amp; Associates at (386) 437-2363 and we will give you a straightforward price for your property with no obligation.</p></div></details>
+        <details><summary>What is a boundary survey, and when do I need one?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>A boundary survey establishes the exact property lines and corners of your land, based on your deed, recorded plats, and markers found in the field. You typically need one before building a fence, pool, or addition, when buying or selling property, when settling a line dispute with a neighbor, or when splitting land. The surveyor sets or flags your corners and provides a signed survey drawing you can rely on for permits, closings, and construction.</p></div></details>
+        <details><summary>What is an ALTA/NSPS land title survey?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>An ALTA/NSPS land title survey is a detailed survey prepared to national standards set by the American Land Title Association and the National Society of Professional Surveyors. It is usually ordered for commercial property purchases, larger land deals, and lender or title company requirements. It shows boundaries, improvements, easements, encroachments, and access in far more detail than a standard survey. Stephenson Wilcox &amp; Associates prepares ALTA/NSPS surveys for attorneys, lenders, and title companies across Flagler County.</p></div></details>
+        <details><summary>What is a topographic survey used for?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>A topographic survey maps the shape of the land: elevations, slopes, drainage patterns, trees, and existing features such as buildings, driveways, and utilities. Architects and engineers use it to design homes, sites, septic systems, and drainage that work with the land instead of against it. In low-lying parts of Flagler County, good elevation data also helps with flood planning and permitting. The result is an accurate map your design team can build from.</p></div></details>
+        <details><summary>What is construction staking?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>Construction staking transfers the design from paper plans onto the ground. Our field crews place stakes and marks that show builders exactly where to put foundations, walls, driveways, utilities, and roads, at the correct position and elevation. Accurate staking prevents expensive mistakes, failed inspections, and rebuilds. Stephenson Wilcox &amp; Associates provides construction staking for home builders, site contractors, and developers throughout Palm Coast and Flagler County, from single homes to full subdivisions.</p></div></details>
+        <details><summary>My property corner markers are missing. Can you find them?<span class="chev" aria-hidden="true">+</span></summary><div class="a"><p>Yes. Missing or buried corner markers are very common in Flagler County, especially on older lots. Using your deed, the recorded plat, and markers on neighboring properties, we retrace your boundaries and reset your corners with new, durable markers. We then flag them clearly so you, your fence company, or your builder can see exactly where your lines are. A boundary survey also gives you a signed drawing that documents the corners for your records.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Contact Us</span>
+        <h2 id="contact-h">Request a Service or Ask a Question</h2>
+        <p>Send us a short message and we will get back to you. Prefer to talk? Our phone and email are right below the form, in plain sight.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="req reveal" id="reqForm">
+          <label for="fName">Name</label>
+          <input id="fName" name="name" type="text" autocomplete="name" required>
+          <label for="fEmail">Email</label>
+          <input id="fEmail" name="email" type="email" autocomplete="email" required>
+          <label for="fPhone">Phone</label>
+          <input id="fPhone" name="phone" type="tel" autocomplete="tel">
+          <label for="fMsg">Message</label>
+          <textarea id="fMsg" name="message" rows="5" placeholder="Tell us about your property and what you need, for example: boundary survey for a fence in Palm Coast." required></textarea>
+          <button class="btn btn-call" type="submit">Send Request</button>
+          <p class="form-note">This opens your email app with the message ready to send to our office. Nothing is stored on this website.</p>
+          <div class="form-sent" id="formSent" role="status">Your email app should now open with your request ready to send. If it does not, please call us at <span data-phone>(386) 437-2363</span>.</div>
+        </form>
+        <div class="contact-card reveal">
+          <h3>Stephenson Wilcox &amp; Associates</h3>
+          <p class="big"><a data-tel href="tel:+13864372363" style="color:#fff" data-phone>(386) 437-2363</a></p>
+          <p>Email: <a data-mail href="mailto:info.swa@gmail.com" data-email>info.swa@gmail.com</a></p>
+          <p>Office: <span data-bind="address">2729 E Moody Blvd #400, Bunnell, FL 32110</span></p>
+          <p>Serving Palm Coast, Bunnell, Flagler Beach &amp; all of Flagler County.</p>
+          <div class="mapbox" aria-label="Map area illustration for the SWA office in Bunnell, Florida">
+            <svg viewBox="0 0 400 220" role="img" aria-label="Stylized map showing the SWA office on East Moody Boulevard in Bunnell">
+              <rect width="400" height="220" fill="#0B1220"/>
+              <path d="M0 150 C90 130 180 168 400 128 L400 220 L0 220 Z" fill="#132036"/>
+              <path d="M-10 96 L410 74" stroke="#334155" stroke-width="16"/>
+              <path d="M-10 96 L410 74" stroke="#FACC15" stroke-width="2" stroke-dasharray="14 10"/>
+              <path d="M120 -10 L150 230" stroke="#334155" stroke-width="10"/>
+              <path d="M268 -10 L250 230" stroke="#334155" stroke-width="8"/>
+              <text x="18" y="66" fill="#94A3B8" font-size="13" font-family="Arial">E Moody Blvd (SR-100)</text>
+              <text x="292" y="196" fill="#64748B" font-size="12" font-family="Arial">Bunnell, FL</text>
+              <g transform="translate(212,84)"><path d="M0-16 C-9-16 -14-9 -14-2 C-14 8 0 18 0 18 C0 18 14 8 14-2 C14-9 9-16 0-16Z" fill="#2563EB"/><circle r="5.5" cy="-3" fill="#fff"/></g>
+              <text x="228" y="80" fill="#fff" font-size="13" font-weight="bold" font-family="Arial">SWA Office</text>
             </svg>
           </div>
-          <div>
-            <div id="live-header-text" class="text-xl sm:text-2xl font-bold leading-tight text-[#0F172A]">Stephenson Wilcox &amp; Associates</div>
-            <div class="text-sm font-semibold text-slate-600">Land Surveying &middot; Bunnell &amp; Palm Coast, FL</div>
-          </div>
-        </a>
-        <a id="live-header-call" href="tel:+13864372363" class="inline-flex min-h-[54px] items-center justify-center gap-2.5 rounded-xl bg-[#2563EB] px-6 py-3 text-lg sm:text-xl font-bold text-white hover:bg-[#1D4ED8] focus:outline-none focus:ring-4 focus:ring-blue-300">
-          <span>&#128222;</span>
-          <span>Call Now: <span class="live-phone">(386) 437-2363</span></span>
-        </a>
-      </div>
-    </header>
-
-    <!-- Main Page Update Banner (Closings, Holidays, Upcoming Projects) -->
-    <div id="live-announcement-banner" role="region" aria-label="Office Update" class="hidden border-b-2 border-blue-200 bg-blue-50 px-4 py-4 sm:px-6">
-      <div class="mx-auto flex max-w-6xl items-start gap-3 text-lg text-[#0F172A]">
-        <span class="text-2xl" aria-hidden="true">&#128226;</span>
-        <div>
-          <span id="live-ann-type" class="font-bold text-[#2563EB]">General Update: </span>
-          <span id="live-ann-text" class="font-semibold"></span>
+          <p style="margin-top:16px"><a href="https://www.google.com/maps/search/?api=1&amp;query=Stephenson+Wilcox+%26+Associates+2729+E+Moody+Blvd+Bunnell+FL+32110" target="_blank" rel="noopener">Get Directions on Google Maps</a></p>
         </div>
       </div>
     </div>
+  </section>
+</main>
 
-    <main id="top">
-      <!-- Hero + Main Characters (Services Grid) -->
-      <section class="bg-slate-50 px-4 py-12 sm:px-6 sm:py-16">
-        <div class="mx-auto max-w-6xl">
-          <div class="grid items-center gap-8 lg:grid-cols-3">
-            <div id="hero-text-col" class="lg:col-span-3 max-w-3xl fade-in">
-              <h1 id="live-hero-headline" class="text-3xl font-bold leading-tight text-[#0F172A] sm:text-5xl">
-                Trusted Land Surveying in Palm Coast &amp; Flagler County.
-              </h1>
-              <p id="live-hero-sub" class="mt-4 text-xl text-slate-700 sm:text-2xl">
-                Family-owned. Accurate. Easy to work with.
-              </p>
-            </div>
-            <div id="hero-photo-col" class="hidden overflow-hidden rounded-2xl border-2 border-slate-200 bg-white shadow-sm">
-              <img id="live-hero-photo" src="" alt="Stephenson Wilcox & Associates team or project photo" class="h-64 w-full object-cover" />
-            </div>
-          </div>
-
-          <div id="services-grid" class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
-        </div>
-      </section>
-
-      <!-- Interactive Ask SWA Assistant -->
-      <section class="border-y-2 border-slate-200 bg-[#0F172A] px-4 py-14 text-white sm:px-6">
-        <div class="mx-auto max-w-3xl">
-          <h2 class="text-3xl font-bold">Have a question? Ask our assistant.</h2>
-          <p class="mt-2 text-lg text-slate-200">
-            Type a quick question about land surveys in Palm Coast or Flagler County.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <button type="button" class="quick-q rounded-lg border border-slate-500 bg-slate-800 px-3.5 py-2 text-base font-semibold text-slate-100 hover:bg-slate-700">Do I need a survey for a fence?</button>
-            <button type="button" class="quick-q rounded-lg border border-slate-500 bg-slate-800 px-3.5 py-2 text-base font-semibold text-slate-100 hover:bg-slate-700">What is an Elevation Certificate?</button>
-            <button type="button" class="quick-q rounded-lg border border-slate-500 bg-slate-800 px-3.5 py-2 text-base font-semibold text-slate-100 hover:bg-slate-700">How much does a survey cost?</button>
-          </div>
-          <form id="ask-swa-form" class="mt-5 flex flex-col gap-3 sm:flex-row">
-            <label for="ask-swa-input" class="sr-only">Ask a land surveying question</label>
-            <input id="ask-swa-input" type="text" placeholder="Example: Do I need a survey to build a fence in Palm Coast?" class="min-h-[54px] flex-1 rounded-xl border-2 border-white bg-white px-4 text-lg text-[#0F172A] placeholder:text-slate-500" />
-            <button type="submit" class="inline-flex min-h-[54px] items-center justify-center rounded-xl bg-[#2563EB] px-7 py-3 text-lg font-bold text-white hover:bg-[#1D4ED8] focus:ring-4 focus:ring-blue-300">
-              Ask SWA
-            </button>
-          </form>
-          <div id="ask-swa-reply" class="hidden mt-5 rounded-xl border-2 border-blue-400 bg-slate-800 p-5 text-lg leading-relaxed text-white"></div>
-
-          <p class="mt-6 text-xl font-bold text-slate-100">
-            Prefer to talk? Call <a id="fallback-call" href="tel:+13864372363" class="text-blue-300 underline live-phone">(386) 437-2363</a> or email <a id="fallback-email" href="mailto:info.swa@gmail.com" class="text-blue-300 underline live-email">info.swa@gmail.com</a>.
-          </p>
-        </div>
-      </section>
-
-      <!-- Minimal Contact & Request Services Form -->
-      <section id="request-service" class="bg-white px-4 py-14 sm:px-6">
-        <div class="mx-auto max-w-2xl">
-          <h2 class="text-3xl font-bold text-[#0F172A]">Request a Service or Ask a Question</h2>
-          <form id="contact-form" class="mt-6 space-y-5">
-            <div>
-              <label for="c-name" class="mb-1.5 block text-lg font-bold">Name</label>
-              <input id="c-name" type="text" required class="min-h-[52px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg text-[#0F172A]" />
-            </div>
-            <div>
-              <label for="c-email" class="mb-1.5 block text-lg font-bold">Email</label>
-              <input id="c-email" type="email" class="min-h-[52px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg text-[#0F172A]" />
-            </div>
-            <div>
-              <label for="c-phone" class="mb-1.5 block text-lg font-bold">Phone</label>
-              <input id="c-phone" type="tel" required class="min-h-[52px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg text-[#0F172A]" />
-            </div>
-            <div>
-              <label for="c-message" class="mb-1.5 block text-lg font-bold">Message</label>
-              <textarea id="c-message" rows="4" placeholder="Tell us your property address or how we can help." class="w-full rounded-xl border-2 border-slate-400 p-4 text-lg text-[#0F172A]"></textarea>
-            </div>
-            <button type="submit" class="inline-flex min-h-[56px] w-full items-center justify-center rounded-xl bg-[#2563EB] px-6 py-3.5 text-xl font-bold text-white hover:bg-[#1D4ED8] focus:ring-4 focus:ring-blue-300">
-              Submit
-            </button>
-            <div id="contact-status" class="hidden rounded-xl border-2 border-[#2563EB] bg-blue-50 p-4 text-lg font-bold text-[#0F172A]"></div>
-          </form>
-
-          <div class="mt-8 rounded-2xl border-2 border-slate-200 bg-slate-50 p-6 text-xl">
-            <p class="font-bold text-[#0F172A]">Phone: <a href="tel:+13864372363" class="text-[#2563EB] underline live-phone">(386) 437-2363</a></p>
-            <p class="mt-2 font-bold text-[#0F172A]">Email: <a href="mailto:info.swa@gmail.com" class="text-[#2563EB] underline live-email">info.swa@gmail.com</a></p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="bg-slate-50 px-4 py-14 sm:px-6">
-        <div class="mx-auto max-w-4xl">
-          <h2 class="text-3xl font-bold text-[#0F172A]">Common Surveying Questions</h2>
-          <div id="faq-list" class="mt-8 space-y-4"></div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer: NAP, Dynamic Working Hours, Embedded Map, Copyright -->
-    <footer class="border-t-2 border-slate-200 bg-[#0F172A] px-4 py-12 text-white sm:px-6">
-      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
-        <div class="space-y-4 text-lg">
-          <h2 class="text-2xl font-bold">Stephenson Wilcox &amp; Associates</h2>
-          <p class="text-slate-200">
-            2729 E Moody Blvd #400, Bunnell, FL 32110<br />
-            Floor 2 &middot; Sunshine Business Complex
-          </p>
-          <p>Phone: <a href="tel:+13864372363" class="font-bold text-blue-300 underline live-phone">(386) 437-2363</a></p>
-          <p>Email: <a href="mailto:info.swa@gmail.com" class="text-blue-300 underline live-email">info.swa@gmail.com</a></p>
-          <p class="text-slate-200">Hours: <span id="live-hours" class="font-semibold">Monday &ndash; Friday: 8:00 AM &ndash; 5:00 PM</span></p>
-        </div>
-        <div>
-          <div id="swa-map" class="h-[280px] w-full rounded-2xl border-2 border-slate-700"></div>
-        </div>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Stephenson Wilcox &amp; Associates</h3>
+        <p>Land Surveying &bull; Palm Coast &amp; Flagler County, FL</p>
       </div>
-      <div class="mx-auto mt-10 max-w-6xl border-t border-slate-800 pt-6 text-base text-slate-400">
-        &copy; 2026 Stephenson Wilcox &amp; Associates. Serving Palm Coast, Bunnell, and Flagler County, Florida.
+      <div>
+        <h3>Visit Us</h3>
+        <p data-bind="address">2729 E Moody Blvd #400, Bunnell, FL 32110</p>
       </div>
-    </footer>
+      <div>
+        <h3>Contact</h3>
+        <p>Phone: <a data-tel href="tel:+13864372363" data-phone>(386) 437-2363</a><br>
+        Email: <a data-mail href="mailto:info.swa@gmail.com" data-email>info.swa@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#services">Services</a> &bull; <a href="#projects">Projects</a> &bull; <a href="#faq">FAQ</a> &bull; <a href="#contact">Contact Us</a></p>
+      </div>
+    </div>
+    <div class="fine">
+      <span>&copy; <span id="year">2026</span> Stephenson Wilcox &amp; Associates. All rights reserved.</span>
+      <span>Land Survey Palm Coast &bull; Boundary Survey Flagler County &bull; Elevation Certificate</span>
+    </div>
   </div>
+</footer>
 
-  <!-- EASY-TO-USE OWNER ADMIN PANEL (/admin) -->
-  <div id="view-admin" class="hidden mx-auto max-w-3xl px-4 py-12">
-    <h1 class="text-3xl font-bold text-[#0F172A]">SWA Owner Website Editor (/admin)</h1>
-    <p class="mt-2 text-lg text-slate-700">Update your website in plain English, then click <strong>Publish Changes</strong>.</p>
-    <div id="admin-status" class="hidden mt-6 rounded-xl border-2 border-[#2563EB] bg-blue-50 p-4 text-lg font-bold"></div>
+<button id="adminBtn" type="button" aria-haspopup="dialog">Owner Admin</button>
 
-    <form id="admin-form" class="mt-6 space-y-8">
-      <!-- 1. Hero Section -->
-      <section class="space-y-4 rounded-2xl border-2 border-slate-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-[#0F172A]">1. Top Hero Section</h2>
-        <p class="text-base text-slate-600">This is the big welcome message visitors see first.</p>
-        <div>
-          <label for="adm-hero-headline" class="mb-1 block text-lg font-bold">Main Big Headline</label>
-          <input id="adm-hero-headline" type="text" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg" />
-        </div>
-        <div>
-          <label for="adm-sub" class="mb-1 block text-lg font-bold">Sub-headline (Smaller Line Below)</label>
-          <input id="adm-sub" type="text" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg" />
-        </div>
-      </section>
+<div id="adminPanel" role="dialog" aria-modal="true" aria-labelledby="admin-h">
+  <div class="admin-card">
+    <h2 id="admin-h">Owner Admin</h2>
+    <p class="hint">Make changes in plain English, preview them live, then click <strong>Download Updated Website</strong> and upload that one file to your Amazon S3 bucket, replacing the old index.html. That is the whole publishing process. &ldquo;Save in this browser&rdquo; only previews changes on this computer.</p>
 
-      <!-- 2. Main Page Updates -->
-      <section class="space-y-4 rounded-2xl border-2 border-slate-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-[#0F172A]">2. Main Page Updates (Closings, Holidays &amp; Projects)</h2>
-        <label class="flex items-center gap-3 text-lg font-bold cursor-pointer">
-          <input id="adm-ann-enabled" type="checkbox" class="h-6 w-6 accent-[#2563EB]" />
-          Show update banner at the top of the website
-        </label>
-        <div>
-          <label for="adm-ann-type" class="mb-1 block text-lg font-bold">Update Type</label>
-          <select id="adm-ann-type" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 bg-white px-4 text-lg">
-            <option value="Holiday / Closing">Holiday / Closing</option>
-            <option value="Unexpected Closing">Unexpected Closing</option>
-            <option value="Upcoming Project / Idea">Upcoming Project / Idea</option>
-            <option value="General Update">General Update</option>
-          </select>
-        </div>
-        <div>
-          <label for="adm-ann-text" class="mb-1 block text-lg font-bold">Message to Show Visitors</label>
-          <textarea id="adm-ann-text" rows="3" placeholder="Example: Closed Friday for Thanksgiving. Normal hours resume Monday at 8 AM." class="w-full rounded-xl border-2 border-slate-400 p-4 text-lg"></textarea>
-        </div>
-      </section>
+    <fieldset>
+      <legend>Announcement Banner (top of the page)</legend>
+      <div class="switchrow"><input type="checkbox" id="aBannerOn"> <label for="aBannerOn" style="margin:0">Show banner</label></div>
+      <label for="aBannerText">Banner text (closings, holidays, news)</label>
+      <input type="text" id="aBannerText" placeholder="Example: Our office will be closed Thursday and Friday for Thanksgiving.">
+    </fieldset>
 
-      <!-- 3. Working Hours & Contact Info -->
-      <section class="space-y-4 rounded-2xl border-2 border-slate-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-[#0F172A]">3. Working Hours &amp; Contact Details</h2>
-        <div>
-          <label for="adm-hours" class="mb-1 block text-lg font-bold">Business Open Hours</label>
-          <input id="adm-hours" type="text" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg" />
-        </div>
-        <div>
-          <label for="adm-header" class="mb-1 block text-lg font-bold">Company Name (Header)</label>
-          <input id="adm-header" type="text" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg" />
-        </div>
-        <div>
-          <label for="adm-phone" class="mb-1 block text-lg font-bold">Phone Number</label>
-          <input id="adm-phone" type="text" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg" />
-        </div>
-        <div>
-          <label for="adm-email" class="mb-1 block text-lg font-bold">Contact Email</label>
-          <input id="adm-email" type="email" class="min-h-[50px] w-full rounded-xl border-2 border-slate-400 px-4 text-lg" />
-        </div>
-      </section>
+    <fieldset>
+      <legend>Hero (top of the main page)</legend>
+      <label for="aHeroEyebrow">Small line above the headline</label>
+      <input type="text" id="aHeroEyebrow">
+      <label for="aHeroTitle">Headline</label>
+      <input type="text" id="aHeroTitle">
+      <label for="aHeroSub">Sub-headline</label>
+      <input type="text" id="aHeroSub">
+    </fieldset>
 
-      <!-- 4. Upload Pictures & Logo -->
-      <section class="space-y-4 rounded-2xl border-2 border-slate-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-[#0F172A]">4. Upload Pictures &amp; Logo</h2>
-        <div>
-          <label for="adm-upload-photo" class="mb-1 block text-lg font-bold">Upload Hero / Project Picture</label>
-          <input id="adm-upload-photo" type="file" accept="image/*" class="block w-full text-lg file:mr-4 file:rounded-xl file:border-0 file:bg-[#0F172A] file:px-5 file:py-3 file:text-base file:font-bold file:text-white" />
-          <div id="adm-photo-preview-wrap" class="hidden mt-3 flex items-center gap-4">
-            <img id="adm-photo-preview" src="" alt="Uploaded preview" class="h-20 w-28 rounded-lg object-cover border" />
-            <button id="adm-remove-photo" type="button" class="text-base font-bold text-red-700 underline">Remove Picture</button>
-          </div>
-        </div>
-        <div>
-          <label for="adm-upload-logo" class="mb-1 block text-lg font-bold">Replace Header Logo (Optional)</label>
-          <input id="adm-upload-logo" type="file" accept="image/*" class="block w-full text-lg file:mr-4 file:rounded-xl file:border-0 file:bg-slate-700 file:px-5 file:py-3 file:text-base file:font-bold file:text-white" />
-        </div>
-      </section>
+    <fieldset>
+      <legend>Business Information</legend>
+      <label for="aPhone">Phone number (as shown)</label>
+      <input type="text" id="aPhone">
+      <label for="aEmail">Email</label>
+      <input type="email" id="aEmail">
+      <label for="aAddress">Office address</label>
+      <input type="text" id="aAddress">
+      <label for="aHours">Working hours (one line per row)</label>
+      <textarea id="aHours"></textarea>
+      <label for="aAbout">About text</label>
+      <textarea id="aAbout"></textarea>
+    </fieldset>
 
-      <button type="submit" class="min-h-[56px] w-full rounded-xl bg-[#2563EB] px-6 py-3.5 text-xl font-bold text-white hover:bg-[#1D4ED8]">
-        Publish Changes
-      </button>
-    </form>
+    <fieldset>
+      <legend>Logo</legend>
+      <p class="hint">Upload a logo image to replace the SWA mark in the header. Square images look best.</p>
+      <label class="filebtn">Upload Logo Picture<input type="file" id="aLogoFile" accept="image/*" hidden></label>
+      <button class="btn btn-ghost" type="button" id="aLogoReset" style="margin-left:10px;min-height:48px">Use Default Mark</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Project Photos</legend>
+      <p class="hint">Add real project photos, write a title and a short description for each, or remove the sample illustrations. Photos are resized automatically so the website file stays fast.</p>
+      <div id="projEditList"></div>
+      <label class="filebtn">Add Project Photo<input type="file" id="aProjFile" accept="image/*" multiple hidden></label>
+    </fieldset>
+
+    <div class="admin-actions">
+      <button class="btn btn-call" type="button" id="aPublish">Save &amp; Preview</button>
+      <button class="btn btn-outline" type="button" id="aExport">Download Updated Website</button>
+      <button class="btn btn-ghost" type="button" id="aReset">Reset to Published Version</button>
+      <button class="btn btn-danger" type="button" id="aClose">Close</button>
+    </div>
+    <div class="admin-status" id="adminStatus" role="status"></div>
   </div>
+</div>
 
-  <script>
-    const STORAGE_KEY = "swa_site_settings_v1";
-    const state = {
-      headerText: "Stephenson Wilcox & Associates",
-      phoneNumber: "(386) 437-2363",
-      contactEmail: "info.swa@gmail.com",
-      businessHours: "Monday – Friday: 8:00 AM – 5:00 PM",
-      heroHeadline: "Trusted Land Surveying in Palm Coast & Flagler County.",
-      heroSubheadline: "Family-owned. Accurate. Easy to work with.",
-      announcementEnabled: false,
-      announcementType: "Holiday / Closing",
-      announcementText: "",
-      featuredPhotoUrl: "",
-      customLogoUrl: ""
-    };
+<script id="swa-data" type="application/json">
+{
+  "heroEyebrow": "Precision Land Surveying & Site Architecture",
+  "heroTitle": "Trusted Land Surveying in Palm Coast & Flagler County.",
+  "heroSub": "Family-owned. Accurate. Easy to work with.",
+  "aboutText": "Stephenson Wilcox & Associates has served Flagler County property owners, builders, realtors, and attorneys for years from our office in Bunnell. We are family-owned, which means when you call, you talk to people who know your neighborhood, your plat, and your project. We keep our process simple: clear prices, careful field work, honest timelines, and a signed survey you can rely on for permits, closings, and construction.",
+  "phone": "(386) 437-2363",
+  "email": "info.swa@gmail.com",
+  "address": "2729 E Moody Blvd #400, Bunnell, FL 32110",
+  "bannerOn": false,
+  "bannerText": "",
+  "hours": [
+    "Monday – Friday: Call for current hours",
+    "Saturday – Sunday: Closed (leave a message anytime)"
+  ],
+  "logo": null,
+  "projects": [
+    { "img": null, "art": "boundary", "title": "Boundary Survey & Corner Marking", "text": "Property lines retraced and corners set and flagged for a Palm Coast homeowner preparing to build a fence." },
+    { "img": null, "art": "elevation", "title": "Elevation Certificates", "text": "FEMA elevation certificates prepared for Flagler County homeowners to document flood levels for their insurance." },
+    { "img": null, "art": "construction", "title": "Construction Staking", "text": "Foundation and site staking for new home construction, transferring the builder's plans precisely onto the ground." }
+  ]
+}
+</script>
 
-    const SERVICES = [
-      {
-        title: "Property Line Survey (Boundary Survey)",
-        summary: "Know exactly where your property begins and ends before you build or buy.",
-        bullets: ["Clear corner markers placed on your lot", "Required for fences, pools, and home additions", "Resolves neighbor boundary questions"],
-        icon: '<svg viewBox="0 0 48 48" class="h-12 w-12 mb-4" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="#2563EB" stroke-width="3" stroke-dasharray="6 4"/><circle cx="6" cy="10" r="4" fill="#0F172A"/><circle cx="42" cy="10" r="4" fill="#0F172A"/><circle cx="6" cy="38" r="4" fill="#0F172A"/><circle cx="42" cy="38" r="4" fill="#0F172A"/></svg>'
-      },
-      {
-        title: "Elevation Certificates (For Flood Insurance)",
-        summary: "Official FEMA measurements to help lower or verify your flood insurance rate.",
-        bullets: ["Certified flood zone height measurements", "Accepted by insurance agents and lenders", "Fast turnaround for Palm Coast & Flagler Beach"],
-        icon: '<svg viewBox="0 0 48 48" class="h-12 w-12 mb-4" fill="none"><path d="M6 34C10 30 14 38 18 34C22 30 26 38 30 34C34 30 38 38 42 34" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/><path d="M12 26V16L24 8L36 16V26" stroke="#0F172A" stroke-width="3" stroke-linejoin="round"/><line x1="24" y1="28" x2="24" y2="18" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/></svg>'
-      },
-      {
-        title: "ALTA/NSPS Land Title Surveys",
-        summary: "Detailed commercial and lender-grade surveys for smooth real estate closings.",
-        bullets: ["Identifies easements, utilities, and encroachments", "Meets national title company standards", "Protects buyers and commercial lenders"],
-        icon: '<svg viewBox="0 0 48 48" class="h-12 w-12 mb-4" fill="none"><rect x="8" y="6" width="26" height="36" rx="3" stroke="#0F172A" stroke-width="3"/><line x1="14" y1="15" x2="28" y2="15" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="23" x2="28" y2="23" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/><circle cx="34" cy="34" r="8" fill="#2563EB"/><path d="M30.5 34L33 36.5L38 31.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-      },
-      {
-        title: "Topographic Surveys",
-        summary: "Maps the natural hills, slopes, trees, and drainage on your land.",
-        bullets: ["Essential before designing a new home or drainage plan", "Shows ground heights, ditches, and structures", "Ready for your architect or civil engineer"],
-        icon: '<svg viewBox="0 0 48 48" class="h-12 w-12 mb-4" fill="none"><path d="M8 34C14 22 20 26 26 16C31 8 36 14 40 28" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/><path d="M8 40C16 32 22 36 30 28C35 23 38 26 40 34" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/></svg>'
-      },
-      {
-        title: "Construction Staking",
-        summary: "On-site wooden stakes that show builders exactly where to dig and pour.",
-        bullets: ["Marks house pads, driveways, and utility lines", "Prevents costly building placement mistakes", "Keeps Flagler County inspections on schedule"],
-        icon: '<svg viewBox="0 0 48 48" class="h-12 w-12 mb-4" fill="none"><path d="M24 8V40" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/><path d="M24 10H38L34 16L38 22H24" fill="#2563EB"/><ellipse cx="24" cy="40" rx="12" ry="3" stroke="#0F172A" stroke-width="2.5"/></svg>'
-      },
-      {
-        title: "Subdivisions & Site Planning",
-        summary: "Splits larger land parcels into approved building lots with county compliance.",
-        bullets: ["Lot splits, platting, and legal descriptions", "Coordinates with Flagler County & Palm Coast permitting", "Supports residential and commercial growth"],
-        icon: '<svg viewBox="0 0 48 48" class="h-12 w-12 mb-4" fill="none"><rect x="6" y="8" width="36" height="32" rx="3" stroke="#0F172A" stroke-width="3"/><line x1="24" y1="8" x2="24" y2="40" stroke="#2563EB" stroke-width="3"/><line x1="6" y1="24" x2="42" y2="24" stroke="#2563EB" stroke-width="3"/></svg>'
-      }
-    ];
+<script>
+(function(){
+"use strict";
+var LS_KEY = "swa-site-state-v1";
+var defaultState = JSON.parse(document.getElementById("swa-data").textContent);
+var state = defaultState;
+try {
+  var saved = localStorage.getItem(LS_KEY);
+  if (saved) { var parsed = JSON.parse(saved); if (parsed && parsed.heroTitle) state = parsed; }
+} catch(e){}
 
-    const FAQS = [
-      { q: "Do I need a survey to build a fence in Palm Coast?", a: "Yes. Both the City of Palm Coast and Flagler County generally require a current boundary survey before issuing a fence permit. A property line survey shows your exact lot corners, easements, and setback lines so your contractor does not accidentally place a fence on a neighbor's land or inside a city utility easement." },
-      { q: "What is an Elevation Certificate and why do I need one?", a: "An Elevation Certificate is an official FEMA form completed by a licensed Florida land surveyor. It documents the height of your home's lowest floor compared to the Base Flood Elevation. Insurance companies and Flagler County permitting offices use this certificate to calculate accurate flood insurance premiums and verify safe building heights." },
-      { q: "How long does a boundary survey take in Flagler County?", a: "Most standard residential boundary surveys in Palm Coast, Bunnell, and Flagler Beach are completed within 1 to 2 weeks from the time you order, depending on weather and record research. If you have an urgent real estate closing or permit deadline, call our office at (386) 437-2363 so we can check current crew availability." },
-      { q: "How much does a land survey cost in Palm Coast?", a: "Survey pricing depends on your lot size, tree or brush cover, and whether you need a boundary survey, elevation certificate, or topographic map. Because every parcel in Flagler County is unique, we provide clear, custom quotes with no hidden fees. Call (386) 437-2363 or submit the short form on this page." },
-      { q: "What is the difference between a Boundary Survey and a Topographic Survey?", a: "A Boundary Survey marks your legal property lines, corners, and existing structures. A Topographic Survey measures the vertical shape of your land—showing ground elevations, slopes, drainage swales, and major trees. You typically need a boundary survey for fences or closings, and a topographic survey when designing a new home or drainage system." },
-      { q: "Will you mark my property corners so I can see them?", a: "Yes. When we perform a boundary survey, our field crew locates existing iron pipes or concrete monuments—or sets new capped markers if corners are missing—and places bright flagging stakes so you and your contractor can clearly see your property lines." },
-      { q: "Can I use an old survey from when I bought my house?", a: "Lenders, title companies, and Palm Coast permitting offices usually require a recent or updated survey if fences, pools, driveways, or additions have been built since the old drawing was made. Bring or email your existing survey to info.swa@gmail.com and we can let you know if an update is possible." },
-      { q: "What areas does Stephenson Wilcox & Associates serve?", a: "Our office is located in Bunnell at 2729 E Moody Blvd #400, right in the heart of Flagler County. We serve homeowners, builders, realtors, and title companies throughout Palm Coast, Bunnell, Flagler Beach, Beverly Beach, Marineland, and surrounding Northeast Florida communities." },
-      { q: "What information do I need to request a survey?", a: "All we need to get started is your property street address (or Flagler County parcel ID), your name, and the best phone number or email to reach you. If you know what project you are planning—such as a fence, pool, home purchase, or flood insurance review—let us know so we recommend the right survey." }
-    ];
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function digits(p){ return String(p||"").replace(/\D/g,""); }
 
-    function renderServices() {
-      const grid = document.getElementById("services-grid");
-      grid.innerHTML = SERVICES.map((s) => `
-        <article class="flex flex-col justify-between rounded-2xl border-2 border-slate-200 bg-white p-6 shadow-sm">
-          <div>
-            ${s.icon}
-            <h2 class="text-2xl font-bold text-[#0F172A]">${s.title}</h2>
-            <p class="mt-3 text-lg text-slate-700">${s.summary}</p>
-            <ul class="mt-4 space-y-2">
-              ${s.bullets.map(b => `<li class="flex items-start gap-2.5 text-base text-slate-800"><span class="text-[#2563EB] font-bold">&#10003;</span><span>${b}</span></li>`).join("")}
-            </ul>
-          </div>
-          <div class="mt-6">
-            <button type="button" data-service="${s.title}" class="req-service-btn text-lg font-bold text-[#2563EB] underline underline-offset-4 hover:text-[#1D4ED8]">
-              Request this survey &rarr;
-            </button>
-          </div>
-        </article>
-      `).join("");
+var ART = {
+  boundary: '<svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a surveyed lot with corner stakes"><rect width="400" height="300" fill="#EFF6FF"/><g stroke="#BFDBFE" stroke-width="1"><path d="M0 60H400M0 120H400M0 180H400M0 240H400M60 0V300M120 0V300M180 0V300M240 0V300M300 0V300M360 0V300"/></g><rect x="90" y="70" width="220" height="160" fill="none" stroke="#2563EB" stroke-width="4" stroke-dasharray="12 8"/><g fill="#F97316"><circle cx="90" cy="70" r="7"/><circle cx="310" cy="70" r="7"/><circle cx="90" cy="230" r="7"/><circle cx="310" cy="230" r="7"/></g><g stroke="#0F172A" stroke-width="3"><path d="M90 70v-26M310 70v-26M90 230v-26M310 230v-26"/></g><g fill="#F97316"><path d="M90 44l20 5-20 5zM310 44l20 5-20 5zM90 204l20 5-20 5zM310 204l20 5-20 5z"/></g><rect x="165" y="118" width="70" height="52" fill="#fff" stroke="#0F172A" stroke-width="3"/><path d="M158 118l42-24 42 24z" fill="#2563EB"/><text x="200" y="272" text-anchor="middle" font-family="Arial" font-size="15" fill="#475569">Lot lines set &amp; flagged</text></svg>',
+  elevation: '<svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a home elevation above flood level"><rect width="400" height="300" fill="#EFF6FF"/><path d="M0 218 H400 V300 H0Z" fill="#BFDBFE"/><g stroke="#2563EB" stroke-width="2" opacity=".55"><path d="M0 238c30-8 60 8 90 0s60 8 90 0 60 8 90 0 60 8 90 0 30-6 40-2"/><path d="M0 262c30-8 60 8 90 0s60 8 90 0 60 8 90 0 60 8 90 0 30-6 40-2"/></g><path d="M60 218 H340" stroke="#0F172A" stroke-width="3" stroke-dasharray="10 6"/><rect x="150" y="120" width="110" height="76" fill="#fff" stroke="#0F172A" stroke-width="3"/><path d="M140 120l65-40 65 40z" fill="#2563EB"/><rect x="192" y="156" width="26" height="40" fill="#0F172A"/><path d="M292 196 V96" stroke="#0F172A" stroke-width="3"/><path d="M284 96h16M284 130h16M284 164h16" stroke="#0F172A" stroke-width="3"/><text x="306" y="100" font-family="Arial" font-size="14" fill="#0F172A">BFE</text><text x="70" y="240" font-family="Arial" font-size="14" fill="#1D4ED8">Flood level</text><text x="200" y="282" text-anchor="middle" font-family="Arial" font-size="15" fill="#475569">Home elevation documented</text></svg>',
+  construction: '<svg viewBox="0 0 400 300" role="img" aria-label="Illustration of construction staking on a building site"><rect width="400" height="300" fill="#EFF6FF"/><rect x="52" y="196" width="296" height="14" fill="#D6C7A8"/><g stroke="#0F172A" stroke-width="3"><path d="M92 196v-52M172 196v-52M252 196v-52M332 196v-52"/></g><g fill="#F97316"><path d="M92 144l24 6-24 6zM172 144l24 6-24 6zM252 144l24 6-24 6zM332 144l24 6-24 6z"/></g><path d="M70 178 H350" stroke="#2563EB" stroke-width="3"/><rect x="150" y="86" width="120" height="60" fill="none" stroke="#2563EB" stroke-width="3" stroke-dasharray="9 6"/><path d="M150 86l60-30 60 30" fill="none" stroke="#2563EB" stroke-width="3" stroke-dasharray="9 6"/><g transform="translate(56,96)"><path d="M10 52 L22 10 L34 52Z" fill="none" stroke="#0F172A" stroke-width="3"/><circle cx="22" cy="16" r="6" fill="#2563EB"/></g><text x="200" y="258" text-anchor="middle" font-family="Arial" font-size="15" fill="#475569">Plans staked on the ground</text></svg>'
+};
 
-      document.querySelectorAll(".req-service-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const msg = document.getElementById("c-message");
-          msg.value = "I would like to request a " + btn.getAttribute("data-service") + ". Property address: ";
-          document.getElementById("request-service").scrollIntoView({ behavior: "smooth" });
-          document.getElementById("c-name").focus();
-        });
-      });
+function applyState(){
+  document.querySelectorAll('[data-bind="heroEyebrow"]').forEach(function(el){ el.textContent = state.heroEyebrow; });
+  document.querySelectorAll('[data-bind="heroTitle"]').forEach(function(el){ el.textContent = state.heroTitle; });
+  document.querySelectorAll('[data-bind="heroSub"]').forEach(function(el){ el.textContent = state.heroSub; });
+  document.querySelectorAll('[data-bind="aboutText"]').forEach(function(el){ el.textContent = state.aboutText; });
+  document.querySelectorAll('[data-bind="address"]').forEach(function(el){ el.textContent = state.address; });
+  document.querySelectorAll("[data-phone]").forEach(function(el){ el.textContent = state.phone; });
+  document.querySelectorAll("[data-email]").forEach(function(el){ el.textContent = state.email; });
+  var tel = "tel:+1" + digits(state.phone);
+  document.querySelectorAll("[data-tel]").forEach(function(el){ el.setAttribute("href", tel); });
+  document.querySelectorAll("[data-mail]").forEach(function(el){ el.setAttribute("href", "mailto:" + state.email); });
+  var banner = document.getElementById("banner");
+  if (state.bannerOn && state.bannerText) { banner.innerHTML = esc(state.bannerText); banner.classList.add("on"); }
+  else { banner.classList.remove("on"); banner.innerHTML = ""; }
+  var hl = document.getElementById("hoursList");
+  hl.innerHTML = state.hours.map(function(h){ return "<li>" + esc(h) + "</li>"; }).join("");
+  var slot = document.getElementById("logoSlot");
+  if (state.logo) { slot.innerHTML = '<img src="' + state.logo + '" alt="Stephenson Wilcox &amp; Associates logo">'; }
+  renderProjects();
+}
+
+function renderProjects(){
+  var grid = document.getElementById("projectGrid");
+  grid.innerHTML = state.projects.map(function(p){
+    var media = p.img ? '<img src="' + p.img + '" alt="' + esc(p.title) + '" loading="lazy">' : (ART[p.art] || ART.boundary);
+    return '<article class="pcard reveal in"><div class="ph">' + media + '</div><div class="pb"><h3>' + esc(p.title) + "</h3><p>" + esc(p.text) + "</p></div></article>";
+  }).join("");
+}
+window.__SWA_SET_STATE = function(ns){ state = ns; applyState(); };
+applyState();
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Reveal on scroll */
+if ("IntersectionObserver" in window) {
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+} else {
+  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+}
+
+/* Ask SWA — built-in assistant, works fully offline in this file */
+var CALL_SCRIPT = "Please call our office at (386) 437-2363 or use the form below so we can help you directly.";
+var KB = [
+  { k:["fence"], a:"Yes, in most cases. A boundary survey marks your exact property lines and corners, so your fence is built on your land and not over a line or easement. We set and flag your corners for your fence company." },
+  { k:["elevation certificate","flood insurance","flood"], a:"An elevation certificate is a FEMA document we prepare that records your home's height compared to the flood level. Lenders often require it, and it can help lower your flood insurance premium." },
+  { k:["how long","long does","turnaround","when will"], a:"Most residential boundary surveys in Flagler County are finished within one to two weeks of ordering, depending on the property and our schedule. Tell us your deadline when you call and we will plan around it." },
+  { k:["cost","price","pricing","how much","quote","fee"], a:CALL_SCRIPT },
+  { k:["schedule","appointment","book","order a survey","get started"], a:CALL_SCRIPT },
+  { k:["alta","nsps","title survey"], a:"An ALTA/NSPS survey is a detailed survey built to national standards, usually for commercial purchases and lender or title company requirements. It documents boundaries, easements, improvements, and access." },
+  { k:["topograph","topo"], a:"A topographic survey maps your land's elevations, slopes, drainage, and features. Architects and engineers use it to design homes, sites, and septic systems that fit the land." },
+  { k:["staking","stake","construction"], a:"Construction staking transfers your plans onto the ground. Our crews place precise stakes and marks so foundations, utilities, and roads are built in exactly the right position and elevation." },
+  { k:["subdiv","split","lot split","site plan"], a:"We handle lot splits, parcel combinations, subdivision platting support, and site planning surveys. Every project is different, so " + CALL_SCRIPT.charAt(0).toLowerCase() + CALL_SCRIPT.slice(1) },
+  { k:["corner","marker","pins","lost"], a:"Yes, we can help. Missing corner markers are common here. Using your deed and the recorded plat, we retrace your lines and reset your corners with new markers, clearly flagged." },
+  { k:["boundary","property line","property lines","where is my line"], a:"A boundary survey establishes your exact property lines and corners from your deed, the recorded plat, and field markers. You get corners set or flagged plus a signed survey drawing." },
+  { k:["buying","selling","closing","realtor","real estate"], a:"A survey is commonly needed at closing to confirm boundaries, improvements, and flood information for the buyer, lender, and title company. " + CALL_SCRIPT },
+  { k:["pool","addition","build","permit"], a:"Before a pool, addition, or other build, a boundary survey confirms your lines and setbacks so your project passes permitting and stays on your land." },
+  { k:["hours","open","when are you"], a:"Our current office hours are shown in the About section of this page. You can also " + CALL_SCRIPT.charAt(0).toLowerCase() + CALL_SCRIPT.slice(1) },
+  { k:["where","located","address","directions"], a:"Our office is at 2729 E Moody Blvd #400, Bunnell, FL 32110, and we serve Palm Coast, Bunnell, Flagler Beach, and all of Flagler County." }
+];
+function askSWA(q){
+  var s = " " + String(q||"").toLowerCase() + " ";
+  for (var i=0;i<KB.length;i++){
+    for (var j=0;j<KB[i].k.length;j++){ if (s.indexOf(KB[i].k[j]) !== -1) return KB[i].a; }
+  }
+  return "Good question. I can answer simple questions about boundary surveys, elevation certificates, ALTA surveys, topographic surveys, and construction staking. For anything else, " + CALL_SCRIPT.charAt(0).toLowerCase() + CALL_SCRIPT.slice(1);
+}
+var askForm = document.getElementById("askForm");
+askForm.addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var q = document.getElementById("askInput").value.trim();
+  var box = document.getElementById("askAnswer");
+  if (!q) { box.textContent = "Type a question above, or tap one of the popular questions."; box.classList.add("on"); return; }
+  box.textContent = askSWA(q); box.classList.add("on");
+});
+document.querySelectorAll(".ask-chips button").forEach(function(b){
+  b.addEventListener("click", function(){
+    document.getElementById("askInput").value = b.getAttribute("data-q");
+    askForm.dispatchEvent(new Event("submit"));
+  });
+});
+
+/* Contact form — opens the visitor's email app (static site, no server) */
+document.getElementById("reqForm").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var name = document.getElementById("fName").value.trim();
+  var email = document.getElementById("fEmail").value.trim();
+  var phone = document.getElementById("fPhone").value.trim();
+  var msg = document.getElementById("fMsg").value.trim();
+  var subject = encodeURIComponent("Website Request — " + name);
+  var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\n\nMessage:\n" + msg);
+  window.location.href = "mailto:" + state.email + "?subject=" + subject + "&body=" + body;
+  document.getElementById("formSent").classList.add("on");
+});
+
+/* Hero background animation — built-in canvas, no libraries.
+   Isometric architectural-diagram style: a surveyed parcel, blue boundary
+   line, corner stakes, and a house that rises from foundation to roof in a
+   smooth loop. Non-interactive (pointer-events: none). */
+(function(){
+  var cv = document.getElementById("heroCanvas"); if (!cv) return;
+  var ctx = cv.getContext("2d");
+  var W=0,H=0,DPR=1;
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function resize(){
+    DPR = Math.min(window.devicePixelRatio||1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W*DPR; cv.height = H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    if (reduced) draw(0.86);
+  }
+  function iso(x,y,z){ return [ (x-y)*0.866, (x+y)*0.5 - z ]; }
+  function poly(pts, fill, stroke, lw){
+    ctx.beginPath();
+    pts.forEach(function(p,i){ if(i===0) ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]); });
+    ctx.closePath();
+    if (fill){ ctx.fillStyle=fill; ctx.fill(); }
+    if (stroke){ ctx.strokeStyle=stroke; ctx.lineWidth=lw||1.4; ctx.stroke(); }
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    var cx = W*0.68, cy = H*0.62;
+    if (W < 760) { cx = W*0.5; cy = H*0.66; }
+    var S = Math.min(W,H)/9.2;
+    // faint blueprint grid
+    ctx.strokeStyle="rgba(37,99,235,.08)"; ctx.lineWidth=1; ctx.beginPath();
+    for (var gx=0; gx<W; gx+=34){ ctx.moveTo(gx,0); ctx.lineTo(gx,H); }
+    for (var gy=0; gy<H; gy+=34){ ctx.moveTo(0,gy); ctx.lineTo(W,gy); }
+    ctx.stroke();
+    function P(x,y,z){ var p=iso(x,y,z||0); return [cx+p[0]*S, cy+p[1]*S]; }
+    // neighboring parcels (faint)
+    ctx.save(); ctx.globalAlpha=.5;
+    poly([P(-4.6,-3.4),P(-2.2,-3.4),P(-2.2,-1.2),P(-4.6,-1.2)], "#FFFFFF","#CBD5E1");
+    poly([P(2.4,1.6),P(4.8,1.6),P(4.8,3.8),P(2.4,3.8)], "#FFFFFF","#CBD5E1");
+    poly([P(-4.8,1.8),P(-2.6,1.8),P(-2.6,3.9),P(-4.8,3.9)], "#FFFFFF","#CBD5E1");
+    ctx.restore();
+    // main parcel
+    poly([P(-2,-2),P(2,-2),P(2,2),P(-2,2)], "rgba(255,255,255,.75)", "#94A3B8");
+    // build stages
+    var found = Math.min(t/0.18,1);
+    var walls = Math.max(0, Math.min((t-0.18)/0.34,1));
+    var roof  = Math.max(0, Math.min((t-0.55)/0.22,1));
+    var land  = Math.max(0, Math.min((t-0.80)/0.15,1));
+    // foundation slab
+    if (found>0){
+      ctx.save(); ctx.globalAlpha=found;
+      poly([P(-1.15,-0.95),P(1.15,-0.95),P(1.15,0.95),P(-1.15,0.95)], "#E2E8F0", "#0F172A");
+      ctx.restore();
     }
-
-    function renderFaqs() {
-      const list = document.getElementById("faq-list");
-      list.innerHTML = FAQS.map((item, idx) => `
-        <div class="rounded-xl border-2 border-slate-200 bg-white px-6">
-          <button type="button" aria-expanded="false" data-faq="${idx}" class="faq-toggle flex w-full items-center justify-between py-5 text-left text-xl font-bold text-[#0F172A] hover:text-[#2563EB]">
-            <span>${item.q}</span>
-            <span class="ml-4 text-2xl font-bold text-[#2563EB]">+</span>
-          </button>
-          <div id="faq-ans-${idx}" class="hidden pb-5 text-lg leading-relaxed text-slate-700">${item.a}</div>
-        </div>
-      `).join("");
-
-      document.querySelectorAll(".faq-toggle").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const idx = btn.getAttribute("data-faq");
-          const ans = document.getElementById("faq-ans-" + idx);
-          const isOpen = !ans.classList.contains("hidden");
-          ans.classList.toggle("hidden");
-          btn.setAttribute("aria-expanded", String(!isOpen));
-          btn.querySelector("span:last-child").textContent = isOpen ? "+" : "−";
-        });
-      });
+    // walls
+    if (walls>0){
+      (function(){
+        function HP(x,y,z){ var p=iso(x,y,z); return [cx+p[0]*S, cy+p[1]*S]; }
+        var s=1.0, d=0.82, h=1.05*walls;
+        var b=[HP(-s,-d,0.06),HP(s,-d,0.06),HP(s,d,0.06),HP(-s,d,0.06)];
+        var tp=[HP(-s,-d,h),HP(s,-d,h),HP(s,d,h),HP(-s,d,h)];
+        poly([b[1],b[2],tp[2],tp[1]], "#EDF2F9", "#0F172A");
+        poly([b[2],b[3],tp[3],tp[2]], "#FFFFFF", "#0F172A");
+        poly(tp, "#F8FAFC", "#0F172A");
+        // door + window on the front face
+        if (walls>0.6){
+          ctx.save(); ctx.globalAlpha=(walls-0.6)/0.4;
+          var d1=HP(-0.18, d, 0.06), d2=HP(0.18, d, 0.06), d3=HP(0.18, d, 0.62), d4=HP(-0.18, d, 0.62);
+          poly([d1,d2,d3,d4], "#0F172A", "#0F172A");
+          var w1=HP(0.48, d, 0.34), w2=HP(0.82, d, 0.34), w3=HP(0.82, d, 0.68), w4=HP(0.48, d, 0.68);
+          poly([w1,w2,w3,w4], "#BFDBFE", "#0F172A");
+          ctx.restore();
+        }
+        // roof
+        if (roof>0){
+          ctx.save(); ctx.globalAlpha=roof;
+          var lift=(1-roof)*0.5;
+          var r=[HP(-s-0.14,-d-0.14,h+lift),HP(s+0.14,-d-0.14,h+lift),HP(s+0.14,d+0.14,h+lift),HP(-s-0.14,d+0.14,h+lift)];
+          var apexF=HP(0,-d-0.14,h+0.62+lift), apexB=HP(0,d+0.14,h+0.62+lift);
+          poly([r[3],r[2],apexB,apexF], "#2563EB", "#0F172A");
+          poly([r[2],r[1],apexF,apexB], "#1D4ED8", "#0F172A");
+          ctx.restore();
+        }
+      })();
     }
-
-    function syncStateToDom() {
-      document.getElementById("live-header-text").textContent = state.headerText;
-      document.getElementById("live-hero-headline").textContent = state.heroHeadline;
-      document.getElementById("live-hero-sub").textContent = state.heroSubheadline;
-      document.getElementById("live-hours").textContent = state.businessHours;
-
-      const cleanTel = state.phoneNumber.replace(/[^0-9+]/g, "");
-      document.querySelectorAll(".live-phone").forEach(el => {
-        el.textContent = state.phoneNumber;
-        if (el.tagName === "A") el.href = "tel:" + cleanTel;
+    // blue boundary line + corner stakes
+    ctx.setLineDash([8,6]); ctx.lineWidth=2.4; ctx.strokeStyle="#2563EB";
+    ctx.beginPath();
+    [P(-2,-2),P(2,-2),P(2,2),P(-2,2)].forEach(function(p,i){ if(i===0)ctx.moveTo(p[0],p[1]); else ctx.lineTo(p[0],p[1]); });
+    ctx.closePath(); ctx.stroke(); ctx.setLineDash([]);
+    [P(-2,-2),P(2,-2),P(2,2),P(-2,2)].forEach(function(p){
+      ctx.strokeStyle="#0F172A"; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(p[0],p[1]); ctx.lineTo(p[0],p[1]-16); ctx.stroke();
+      ctx.fillStyle="#F97316"; ctx.beginPath(); ctx.moveTo(p[0],p[1]-16); ctx.lineTo(p[0]+13,p[1]-12.5); ctx.lineTo(p[0],p[1]-9); ctx.closePath(); ctx.fill();
+    });
+    // landscaping pops in last
+    if (land>0){
+      ctx.save(); ctx.globalAlpha=land;
+      [[-1.7,1.5],[1.75,-1.55],[1.8,1.45]].forEach(function(tr){
+        var p=P(tr[0],tr[1]);
+        ctx.strokeStyle="#0F172A"; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(p[0],p[1]); ctx.lineTo(p[0],p[1]-12*land); ctx.stroke();
+        ctx.fillStyle="#22C55E"; ctx.beginPath(); ctx.arc(p[0],p[1]-20*land,10*land,0,Math.PI*2); ctx.fill();
+        ctx.strokeStyle="#0F172A"; ctx.lineWidth=1.2; ctx.stroke();
       });
-      document.getElementById("live-header-call").href = "tel:" + cleanTel;
-      document.querySelectorAll(".live-email").forEach(el => {
-        el.textContent = state.contactEmail;
-        if (el.tagName === "A") el.href = "mailto:" + state.contactEmail;
+      ctx.restore();
+    }
+  }
+  var start=null, LOOP=11000;
+  function frame(ts){
+    if (document.hidden){ requestAnimationFrame(frame); return; }
+    if (!start) start=ts;
+    var t=((ts-start)%LOOP)/LOOP;
+    // ease: hold the finished house briefly at the end of the loop
+    var tt = t<0.88 ? t/0.88 : 1;
+    draw(tt);
+    requestAnimationFrame(frame);
+  }
+  resize();
+  window.addEventListener("resize", resize);
+  if (!reduced) requestAnimationFrame(frame);
+})();
+})();
+</script>
+
+<script>
+(function(){
+"use strict";
+var LS_KEY = "swa-site-state-v1";
+var dataEl = document.getElementById("swa-data");
+var publishedState = JSON.parse(dataEl.textContent);
+var state;
+try { state = JSON.parse(localStorage.getItem(LS_KEY)) || null; } catch(e){ state = null; }
+if (!state || !state.heroTitle) state = JSON.parse(JSON.stringify(publishedState));
+
+var panel = document.getElementById("adminPanel");
+var status = document.getElementById("adminStatus");
+function say(msg){ status.textContent = msg; status.classList.add("on"); }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+
+/* The main script owns rendering; admin talks to it through a tiny bridge:
+   it rewrites the state object the page uses by dispatching a custom event. */
+function pushState(){
+  try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch(e){}
+  window.__SWA_SET_STATE && window.__SWA_SET_STATE(state);
+}
+
+function fillFields(){
+  document.getElementById("aBannerOn").checked = !!state.bannerOn;
+  document.getElementById("aBannerText").value = state.bannerText || "";
+  document.getElementById("aHeroEyebrow").value = state.heroEyebrow || "";
+  document.getElementById("aHeroTitle").value = state.heroTitle || "";
+  document.getElementById("aHeroSub").value = state.heroSub || "";
+  document.getElementById("aPhone").value = state.phone || "";
+  document.getElementById("aEmail").value = state.email || "";
+  document.getElementById("aAddress").value = state.address || "";
+  document.getElementById("aHours").value = (state.hours||[]).join("\n");
+  document.getElementById("aAbout").value = state.aboutText || "";
+  renderProjEdit();
+}
+function collectFields(){
+  state.bannerOn = document.getElementById("aBannerOn").checked;
+  state.bannerText = document.getElementById("aBannerText").value.trim();
+  state.heroEyebrow = document.getElementById("aHeroEyebrow").value.trim();
+  state.heroTitle = document.getElementById("aHeroTitle").value.trim();
+  state.heroSub = document.getElementById("aHeroSub").value.trim();
+  state.phone = document.getElementById("aPhone").value.trim();
+  state.email = document.getElementById("aEmail").value.trim();
+  state.address = document.getElementById("aAddress").value.trim();
+  state.hours = document.getElementById("aHours").value.split("\n").map(function(s){return s.trim();}).filter(Boolean);
+  state.aboutText = document.getElementById("aAbout").value.trim();
+  // project titles/texts
+  document.querySelectorAll(".proj-edit").forEach(function(row){
+    var i = Number(row.getAttribute("data-idx"));
+    if (state.projects[i]){
+      state.projects[i].title = row.querySelector(".p-title").value.trim();
+      state.projects[i].text = row.querySelector(".p-text").value.trim();
+    }
+  });
+}
+
+function renderProjEdit(){
+  var list = document.getElementById("projEditList");
+  list.innerHTML = state.projects.map(function(p,i){
+    var thumb = p.img ? '<img src="' + p.img + '" alt="">' : '<span class="thumb" style="display:inline-block"></span>';
+    return '<div class="proj-edit" data-idx="' + i + '">' + thumb +
+      '<div class="fields">' +
+      '<input type="text" class="p-title" value="' + esc(p.title) + '" aria-label="Project title">' +
+      '<textarea class="p-text" aria-label="Project description">' + esc(p.text) + "</textarea>" +
+      '<label class="filebtn" style="padding:9px 14px;font-size:.92rem">Replace Photo<input type="file" class="p-file" accept="image/*" hidden></label> ' +
+      '<button type="button" class="btn btn-danger p-del" style="min-height:44px;padding:8px 16px">Remove</button>' +
+      "</div></div>";
+  }).join("");
+  list.querySelectorAll(".proj-edit").forEach(function(row){
+    var i = Number(row.getAttribute("data-idx"));
+    row.querySelector(".p-del").addEventListener("click", function(){
+      collectFields();
+      state.projects.splice(i,1);
+      pushState(); renderProjEdit();
+      say("Project removed. Remember to Download Updated Website to publish.");
+    });
+    row.querySelector(".p-file").addEventListener("change", function(ev){
+      var f = ev.target.files && ev.target.files[0]; if (!f) return;
+      fileToDataURL(f, 1400, "image/jpeg", 0.82, function(url){
+        collectFields();
+        state.projects[i].img = url;
+        pushState(); renderProjEdit();
+        say("Photo updated. Remember to Download Updated Website to publish.");
       });
-
-      const banner = document.getElementById("live-announcement-banner");
-      if (state.announcementEnabled && state.announcementText.trim()) {
-        document.getElementById("live-ann-type").textContent = state.announcementType + ": ";
-        document.getElementById("live-ann-text").textContent = state.announcementText;
-        banner.classList.remove("hidden");
-      } else {
-        banner.classList.add("hidden");
-      }
-
-      const photoCol = document.getElementById("hero-photo-col");
-      const textCol = document.getElementById("hero-text-col");
-      const previewWrap = document.getElementById("adm-photo-preview-wrap");
-      if (state.featuredPhotoUrl) {
-        document.getElementById("live-hero-photo").src = state.featuredPhotoUrl;
-        document.getElementById("adm-photo-preview").src = state.featuredPhotoUrl;
-        photoCol.classList.remove("hidden");
-        previewWrap.classList.remove("hidden");
-        textCol.className = "lg:col-span-2 fade-in";
-      } else {
-        photoCol.classList.add("hidden");
-        previewWrap.classList.add("hidden");
-        textCol.className = "lg:col-span-3 max-w-3xl fade-in";
-      }
-
-      if (state.customLogoUrl) {
-        document.getElementById("live-logo-wrap").innerHTML = '<img src="' + state.customLogoUrl + '" alt="SWA Logo" class="h-12 w-auto rounded-lg object-contain" />';
-      }
-
-      document.getElementById("adm-hero-headline").value = state.heroHeadline;
-      document.getElementById("adm-sub").value = state.heroSubheadline;
-      document.getElementById("adm-ann-enabled").checked = state.announcementEnabled;
-      document.getElementById("adm-ann-type").value = state.announcementType;
-      document.getElementById("adm-ann-text").value = state.announcementText;
-      document.getElementById("adm-hours").value = state.businessHours;
-      document.getElementById("adm-header").value = state.headerText;
-      document.getElementById("adm-phone").value = state.phoneNumber;
-      document.getElementById("adm-email").value = state.contactEmail;
-    }
-
-    function answerSwaQuestion(raw) {
-      const q = raw.toLowerCase().trim();
-      if (!q) return "Please type a question about land surveying in Palm Coast or Flagler County.";
-      if (/(price|cost|quote|how much|fee|charge|schedule|book|appointment|when can|turnaround|rush|dispute|encroach|lawsuit|court)/.test(q)) {
-        return "Please call our office at " + state.phoneNumber + " or use the form below so we can help you directly.";
-      }
-      if (/(fence|pool|shed|addition|boundary|property line)/.test(q)) {
-        return "Yes, Palm Coast and Flagler County usually require a Boundary Survey before issuing a fence or pool permit. We mark your exact property corners clearly.";
-      }
-      if (/(flood|elevation|fema|insurance)/.test(q)) {
-        return "An Elevation Certificate measures your home's height relative to flood zones. Insurance agents use it to set accurate flood insurance rates in Flagler County.";
-      }
-      if (/(where|address|located|bunnell|hours|open)/.test(q)) {
-        return "Our office is at 2729 E Moody Blvd #400 in Bunnell, FL (Floor 2, Sunshine Business Complex). Hours: " + state.businessHours + ".";
-      }
-      return "We handle boundary surveys, elevation certificates, topographic maps, and construction staking across Palm Coast and Flagler County. For project specifics, call " + state.phoneNumber + ".";
-    }
-
-    document.getElementById("ask-swa-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const input = document.getElementById("ask-swa-input");
-      const replyBox = document.getElementById("ask-swa-reply");
-      replyBox.textContent = answerSwaQuestion(input.value);
-      replyBox.classList.remove("hidden");
     });
+  });
+}
 
-    document.querySelectorAll(".quick-q").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const input = document.getElementById("ask-swa-input");
-        input.value = btn.textContent;
-        const replyBox = document.getElementById("ask-swa-reply");
-        replyBox.textContent = answerSwaQuestion(input.value);
-        replyBox.classList.remove("hidden");
-      });
+function fileToDataURL(file, maxDim, type, quality, cb){
+  if (file.type === "image/svg+xml"){
+    var r = new FileReader(); r.onload = function(){ cb(r.result); }; r.readAsDataURL(file); return;
+  }
+  var url = URL.createObjectURL(file);
+  var img = new Image();
+  img.onload = function(){
+    var scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+    var w = Math.round(img.width*scale), h = Math.round(img.height*scale);
+    var c = document.createElement("canvas"); c.width=w; c.height=h;
+    c.getContext("2d").drawImage(img,0,0,w,h);
+    URL.revokeObjectURL(url);
+    cb(c.toDataURL(type, quality));
+  };
+  img.onerror = function(){ URL.revokeObjectURL(url); var r2=new FileReader(); r2.onload=function(){ cb(r2.result); }; r2.readAsDataURL(file); };
+  img.src = url;
+}
+
+document.getElementById("adminBtn").addEventListener("click", function(){
+  fillFields(); panel.classList.add("on"); status.classList.remove("on");
+});
+document.getElementById("aClose").addEventListener("click", function(){ panel.classList.remove("on"); });
+panel.addEventListener("click", function(ev){ if (ev.target === panel) panel.classList.remove("on"); });
+
+document.getElementById("aPublish").addEventListener("click", function(){
+  collectFields(); pushState();
+  say("Saved. The page behind this panel now shows your changes. To put them on the live website, click Download Updated Website and upload that file to your S3 bucket.");
+});
+document.getElementById("aReset").addEventListener("click", function(){
+  try { localStorage.removeItem(LS_KEY); } catch(e){}
+  state = JSON.parse(JSON.stringify(publishedState));
+  window.__SWA_SET_STATE && window.__SWA_SET_STATE(state);
+  fillFields();
+  say("Reset done. This browser now shows the published version again.");
+});
+document.getElementById("aLogoReset").addEventListener("click", function(){
+  collectFields(); state.logo = null; pushState();
+  say("Default SWA mark restored.");
+});
+document.getElementById("aLogoFile").addEventListener("change", function(ev){
+  var f = ev.target.files && ev.target.files[0]; if (!f) return;
+  fileToDataURL(f, 512, "image/png", 0.92, function(url){
+    collectFields(); state.logo = url; pushState();
+    say("Logo updated. Remember to Download Updated Website to publish.");
+  });
+});
+document.getElementById("aProjFile").addEventListener("change", function(ev){
+  var files = Array.prototype.slice.call(ev.target.files||[]);
+  if (!files.length) return;
+  collectFields();
+  var pending = files.length;
+  files.forEach(function(f){
+    fileToDataURL(f, 1400, "image/jpeg", 0.82, function(url){
+      state.projects.push({ img:url, art:"boundary", title:"New Project Photo", text:"" });
+      if (--pending === 0){ pushState(); renderProjEdit(); say(files.length + " photo(s) added. Add a title and description, then Download Updated Website to publish."); }
     });
+  });
+});
 
-    document.getElementById("contact-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = document.getElementById("c-name").value.trim();
-      const status = document.getElementById("contact-status");
-      status.textContent = "Thank you, " + name + "! Your request has been received. Our Bunnell office will contact you shortly, or call " + state.phoneNumber + ".";
-      status.classList.remove("hidden");
-      e.target.reset();
-    });
-
-    // Tab switching
-    const tabPublic = document.getElementById("tab-public");
-    const tabAdmin = document.getElementById("tab-admin");
-    const viewPublic = document.getElementById("view-public");
-    const viewAdmin = document.getElementById("view-admin");
-
-    tabPublic.addEventListener("click", () => {
-      viewPublic.classList.remove("hidden");
-      viewAdmin.classList.add("hidden");
-      tabPublic.className = "rounded-lg px-4 py-1.5 font-bold bg-[#2563EB] text-white";
-      tabAdmin.className = "rounded-lg px-4 py-1.5 font-bold bg-slate-700 text-slate-200 hover:bg-slate-600";
-    });
-
-    tabAdmin.addEventListener("click", () => {
-      viewAdmin.classList.remove("hidden");
-      viewPublic.classList.add("hidden");
-      tabAdmin.className = "rounded-lg px-4 py-1.5 font-bold bg-[#2563EB] text-white";
-      tabPublic.className = "rounded-lg px-4 py-1.5 font-bold bg-slate-700 text-slate-200 hover:bg-slate-600";
-    });
-
-    // Picture / Logo Upload Handlers
-    document.getElementById("adm-upload-photo").addEventListener("change", (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        state.featuredPhotoUrl = reader.result;
-        syncStateToDom();
-        const box = document.getElementById("admin-status");
-        box.textContent = "Picture uploaded! Click 'Publish Changes' to confirm.";
-        box.classList.remove("hidden");
-      };
-      reader.readAsDataURL(file);
-    });
-
-    document.getElementById("adm-remove-photo").addEventListener("click", () => {
-      state.featuredPhotoUrl = "";
-      document.getElementById("adm-upload-photo").value = "";
-      syncStateToDom();
-    });
-
-    document.getElementById("adm-upload-logo").addEventListener("change", (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        state.customLogoUrl = reader.result;
-        syncStateToDom();
-        const box = document.getElementById("admin-status");
-        box.textContent = "Logo uploaded! Click 'Publish Changes' to confirm.";
-        box.classList.remove("hidden");
-      };
-      reader.readAsDataURL(file);
-    });
-
-    document.getElementById("admin-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      state.heroHeadline = document.getElementById("adm-hero-headline").value.trim() || state.heroHeadline;
-      state.heroSubheadline = document.getElementById("adm-sub").value.trim() || state.heroSubheadline;
-      state.announcementEnabled = document.getElementById("adm-ann-enabled").checked;
-      state.announcementType = document.getElementById("adm-ann-type").value;
-      state.announcementText = document.getElementById("adm-ann-text").value.trim();
-      state.businessHours = document.getElementById("adm-hours").value.trim() || state.businessHours;
-      state.headerText = document.getElementById("adm-header").value.trim() || state.headerText;
-      state.phoneNumber = document.getElementById("adm-phone").value.trim() || state.phoneNumber;
-      state.contactEmail = document.getElementById("adm-email").value.trim() || state.contactEmail;
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
-      syncStateToDom();
-      const box = document.getElementById("admin-status");
-      box.textContent = "Published! Switch to Public Website to see your live changes.";
-      box.classList.remove("hidden");
-    });
-
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) Object.assign(state, JSON.parse(saved));
-    } catch (_) {}
-
-    renderServices();
-    renderFaqs();
-    syncStateToDom();
-
-    if (typeof L !== "undefined") {
-      const map = L.map("swa-map").setView([29.4772, -81.2241], 14);
-      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
-        attribution: "Tiles &copy; Esri"
-      }).addTo(map);
-      L.marker([29.4772, -81.2241]).addTo(map).bindPopup("<strong>Stephenson Wilcox &amp; Associates</strong><br>2729 E Moody Blvd #400, Bunnell, FL 32110").openPopup();
-    }
-  </script>
+document.getElementById("aExport").addEventListener("click", function(){
+  collectFields();
+  var clone = document.documentElement.cloneNode(true);
+  var cData = clone.querySelector("#swa-data");
+  cData.textContent = "\n" + JSON.stringify(state, null, 2) + "\n";
+  var cPanel = clone.querySelector("#adminPanel"); if (cPanel) cPanel.classList.remove("on");
+  var cStatus = clone.querySelector("#adminStatus"); if (cStatus) cStatus.classList.remove("on");
+  var html = "<!DOCTYPE html>\n" + clone.outerHTML;
+  var blob = new Blob([html], { type: "text/html" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "index.html";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
+  say("Your updated index.html is downloading. In your Amazon S3 bucket, upload it over the old index.html (same name). The site updates as soon as the upload finishes.");
+});
+})();
+</script>
 </body>
 </html>
