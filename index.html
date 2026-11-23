@@ -105,7 +105,8 @@ section{padding:72px 0}
 #banner a{color:#93C5FD}
 
 /* Header */
-header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);transition:transform .28s ease}
+header.site.hide{transform:translateY(-100%)}
 .header-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);margin-right:auto}
 .brand img{width:52px;height:52px;object-fit:contain;border-radius:10px}
@@ -296,7 +297,6 @@ html[data-theme="dark"] .admin-status{background:#052E22;border-color:#065F46;co
 html[data-theme="dark"] .form-sent{background:#052E22;border-color:#065F46;color:#A7F3D0}
 @media(max-width:640px){
   html,body{overflow-x:clip}
-  header.site{position:static}
   section{padding:46px 0}
   .wrap{padding:0 16px}
   .header-in{gap:10px;padding:10px 0}
@@ -771,6 +771,22 @@ function renderProjects(){
 window.__SWA_SET_STATE = function(ns){ state = ns; applyState(); };
 applyState();
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* Header hides on scroll down, returns on scroll up */
+(function(){
+  var header = document.querySelector("header.site"); if (!header) return;
+  var lastY = window.scrollY || 0, ticking = false;
+  function onScroll(){
+    var y = window.scrollY || 0;
+    if (y > 140 && y > lastY + 4) header.classList.add("hide");
+    else if (y < lastY - 4 || y <= 140) header.classList.remove("hide");
+    lastY = y; ticking = false;
+  }
+  window.addEventListener("scroll", function(){
+    if (!ticking){ ticking = true; window.requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  header.addEventListener("focusin", function(){ header.classList.remove("hide"); });
+})();
 
 /* Reveal on scroll */
 if ("IntersectionObserver" in window) {
