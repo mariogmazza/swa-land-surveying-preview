@@ -244,6 +244,50 @@ footer.site .fine{border-top:1px solid #1E293B;margin-top:34px;padding-top:20px;
 .filebtn{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--navy);border:2px dashed #93C5FD;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer;margin-top:6px}
 .admin-status{display:none;margin-top:16px;background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;border-radius:10px;padding:12px 16px;font-weight:600}
 .admin-status.on{display:block}
+/* Theme toggle */
+#themeBtn{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:12px 18px;border-radius:12px;
+  background:var(--sky);border:1px solid var(--line);color:var(--navy);font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+#themeBtn:hover{border-color:var(--blue)}
+
+/* Dark mode */
+html[data-theme="dark"]{
+  --bg:#0B1220; --card:#101B2E; --ink:#E5EDF7; --muted:#9DB0C6; --line:#263449; --sky:#16283F;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+html[data-theme="dark"] body{background:var(--bg);color:var(--ink)}
+html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3{color:#EAF1FA}
+html[data-theme="dark"] header.site{background:rgba(11,18,32,.95);border-bottom-color:var(--line)}
+html[data-theme="dark"] .brand{color:#EAF1FA}
+html[data-theme="dark"] nav.main a{color:#EAF1FA}
+html[data-theme="dark"] #themeBtn{color:#EAF1FA}
+html[data-theme="dark"] .hero{background:linear-gradient(180deg,#0B1220 0%,#0E1E38 100%)}
+html[data-theme="dark"] .hero .sub{color:#C7D5E8}
+html[data-theme="dark"] .trust span{background:var(--card);color:#EAF1FA}
+html[data-theme="dark"] .services{background:var(--bg)}
+html[data-theme="dark"] .card ul{color:#C7D5E8}
+html[data-theme="dark"] .projects,html[data-theme="dark"] .faq{background:#0D1626}
+html[data-theme="dark"] .pcard{background:var(--card)}
+html[data-theme="dark"] .ask-box{background:var(--card);color:var(--ink)}
+html[data-theme="dark"] .ask-row input{background:#0B1220;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .ask-fallback{color:#C7D5E8}
+html[data-theme="dark"] .ask-chips button{background:var(--card);color:#EAF1FA}
+html[data-theme="dark"] .hours-card{border-color:#1E3A5F}
+html[data-theme="dark"] .hours-card li{border-bottom-color:#2A4A73}
+html[data-theme="dark"] .faq details{background:var(--card)}
+html[data-theme="dark"] .faq summary{color:#EAF1FA}
+html[data-theme="dark"] .faq .a{color:#C7D5E8}
+html[data-theme="dark"] form.req{background:var(--card)}
+html[data-theme="dark"] form.req label{color:#EAF1FA}
+html[data-theme="dark"] form.req input,html[data-theme="dark"] form.req textarea{background:#0B1220;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .btn-outline{background:transparent;color:#EAF1FA;border-color:#64748B}
+html[data-theme="dark"] .btn-outline:hover{background:var(--sky)}
+html[data-theme="dark"] .admin-card{background:#101B2E;color:var(--ink)}
+html[data-theme="dark"] .admin-card legend,html[data-theme="dark"] .admin-card label,html[data-theme="dark"] .switchrow{color:#EAF1FA}
+html[data-theme="dark"] .admin-card input[type=text],html[data-theme="dark"] .admin-card input[type=email],html[data-theme="dark"] .admin-card textarea{background:#0B1220;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .btn-ghost{background:transparent;color:#EAF1FA}
+html[data-theme="dark"] .filebtn{color:#EAF1FA;border-color:#2A4A73}
+html[data-theme="dark"] .admin-status{background:#052E22;border-color:#065F46;color:#A7F3D0}
+html[data-theme="dark"] .form-sent{background:#052E22;border-color:#065F46;color:#A7F3D0}
 @media(max-width:640px){
   section{padding:54px 0}
   .header-in{gap:10px}
@@ -276,6 +320,7 @@ footer.site .fine{border-top:1px solid #1E293B;margin-top:34px;padding-top:20px;
       <a href="#contact">Contact Us</a>
     </nav>
     <a class="btn btn-call" data-tel href="tel:+13864372363">Call Now: <span data-phone>(386) 437-2363</span></a>
+    <button id="themeBtn" type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themeLabel">Dark</span></button>
   </div>
 </header>
 
@@ -582,8 +627,8 @@ footer.site .fine{border-top:1px solid #1E293B;margin-top:34px;padding-top:20px;
   "bannerOn": false,
   "bannerText": "",
   "hours": [
-    "Monday – Friday: Call for current hours",
-    "Saturday – Sunday: Closed (leave a message anytime)"
+    "Monday – Friday: 8:00 AM – 5:00 PM",
+    "Saturday – Sunday: Closed"
   ],
   "logo": null,
   "projects": [
@@ -598,6 +643,25 @@ footer.site .fine{border-top:1px solid #1E293B;margin-top:34px;padding-top:20px;
 (function(){
 "use strict";
 var LS_KEY = "swa-site-state-v1";
+/* Theme: visitor's saved choice, else their system preference */
+var themeBtn = document.getElementById("themeBtn");
+function setTheme(t){
+  if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  else document.documentElement.removeAttribute("data-theme");
+  if (themeBtn){
+    themeBtn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
+    themeBtn.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    var lbl = document.getElementById("themeLabel"); if (lbl) lbl.textContent = t === "dark" ? "Light" : "Dark";
+  }
+}
+var startTheme = "light";
+try { startTheme = localStorage.getItem("swa-theme") || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); } catch(e){}
+setTheme(startTheme);
+if (themeBtn) themeBtn.addEventListener("click", function(){
+  var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  setTheme(next);
+  try { localStorage.setItem("swa-theme", next); } catch(e){}
+});
 var defaultState = JSON.parse(document.getElementById("swa-data").textContent);
 var state = defaultState;
 try {
@@ -982,6 +1046,7 @@ document.getElementById("aProjFile").addEventListener("change", function(ev){
 document.getElementById("aExport").addEventListener("click", function(){
   collectFields();
   var clone = document.documentElement.cloneNode(true);
+  clone.removeAttribute("data-theme");
   var cData = clone.querySelector("#swa-data");
   cData.textContent = "\n" + JSON.stringify(state, null, 2) + "\n";
   var cPanel = clone.querySelector("#adminPanel"); if (cPanel) cPanel.classList.remove("on");
