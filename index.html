@@ -131,7 +131,7 @@ header .btn{min-height:52px;padding:12px 22px}
 .services{background:#fff;padding-top:64px}
 .sec-head{max-width:44rem;margin-bottom:38px}
 .sec-head p{color:var(--muted);margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:22px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}
 .card .icon{width:60px;height:60px;border-radius:14px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .card h3{margin-bottom:10px}
@@ -145,7 +145,7 @@ header .btn{min-height:52px;padding:12px 22px}
 .ask .lead{color:#CBD5E1}
 .ask-box{background:#fff;color:var(--ink);border-radius:var(--radius);padding:28px;max-width:46rem;box-shadow:var(--shadow)}
 .ask-row{display:flex;gap:12px;flex-wrap:wrap}
-.ask-row input{flex:1 1 320px;min-height:56px;font-size:1.05rem;padding:12px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit}
+.ask-row input{flex:1 1 min(320px,100%);min-height:56px;font-size:1.05rem;padding:12px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit}
 .ask-answer{display:none;margin-top:18px;background:var(--sky);border-left:5px solid var(--blue);border-radius:10px;padding:16px 18px;font-size:1.03rem}
 .ask-answer.on{display:block}
 .ask-fallback{margin-top:16px;color:var(--navy2);font-size:1.02rem}
@@ -155,7 +155,7 @@ header .btn{min-height:52px;padding:12px 22px}
 
 /* Projects */
 .projects{background:#F8FAFC}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:22px}
 .pcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .pcard .ph{aspect-ratio:4/3;background:var(--sky);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .pcard .ph img{width:100%;height:100%;object-fit:cover;display:block}
@@ -244,10 +244,14 @@ footer.site .fine{border-top:1px solid #1E293B;margin-top:34px;padding-top:20px;
 .filebtn{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--navy);border:2px dashed #93C5FD;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer;margin-top:6px}
 .admin-status{display:none;margin-top:16px;background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;border-radius:10px;padding:12px 16px;font-weight:600}
 .admin-status.on{display:block}
-/* Theme toggle */
-#themeBtn{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:12px 18px;border-radius:12px;
-  background:var(--sky);border:1px solid var(--line);color:var(--navy);font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+/* Theme toggle — small icon-only button, stays out of the way */
+#themeBtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;min-height:36px;padding:0;border-radius:10px;
+  background:var(--sky);border:1px solid var(--line);color:var(--navy);cursor:pointer;font-family:inherit;flex:0 0 auto}
 #themeBtn:hover{border-color:var(--blue)}
+#themeLabel{display:none}
+/* Mobile menu button — hidden on desktop, holds nav + theme toggle on phones */
+#menuBtn{display:none}
+.menu-theme{display:none}
 
 /* Dark mode */
 html[data-theme="dark"]{
@@ -260,6 +264,8 @@ html[data-theme="dark"] header.site{background:rgba(11,18,32,.95);border-bottom-
 html[data-theme="dark"] .brand{color:#EAF1FA}
 html[data-theme="dark"] nav.main a{color:#EAF1FA}
 html[data-theme="dark"] #themeBtn{color:#EAF1FA}
+html[data-theme="dark"] #menuBtn{color:#EAF1FA}
+html[data-theme="dark"] .menu-theme{color:#EAF1FA}
 html[data-theme="dark"] .hero{background:linear-gradient(180deg,#0B1220 0%,#0E1E38 100%)}
 html[data-theme="dark"] .hero .sub{color:#C7D5E8}
 html[data-theme="dark"] .trust span{background:var(--card);color:#EAF1FA}
@@ -289,12 +295,45 @@ html[data-theme="dark"] .filebtn{color:#EAF1FA;border-color:#2A4A73}
 html[data-theme="dark"] .admin-status{background:#052E22;border-color:#065F46;color:#A7F3D0}
 html[data-theme="dark"] .form-sent{background:#052E22;border-color:#065F46;color:#A7F3D0}
 @media(max-width:640px){
-  section{padding:54px 0}
-  .header-in{gap:10px}
-  header .btn{width:100%;justify-content:center}
-  .brand{margin-right:0}
-  nav.main{order:3;width:100%}
-  nav.main a{flex:1;text-align:center;background:var(--sky)}
+  html,body{overflow-x:clip}
+  header.site{position:static}
+  section{padding:46px 0}
+  .wrap{padding:0 16px}
+  .header-in{gap:10px;padding:10px 0}
+  .brand{margin-right:auto;gap:9px}
+  .brand .mark{width:40px;height:40px;flex-basis:40px}
+  .brand img{width:40px;height:40px}
+  .brand-name{font-size:.98rem}
+  .brand-sub{display:none}
+  #themeBtn{display:none}
+  #menuBtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;min-height:36px;padding:0;border-radius:10px;
+    background:var(--sky);border:1px solid var(--line);color:var(--navy);cursor:pointer;font-family:inherit;flex:0 0 auto;margin-left:auto}
+  #menuBtn:hover{border-color:var(--blue)}
+  header .btn{order:4;flex:1 1 100%;justify-content:center;min-height:52px}
+  nav.main{display:none;order:3;width:100%;grid-template-columns:1fr;gap:6px}
+  header.site.menu-open nav.main{display:grid}
+  nav.main a{text-align:left;background:var(--sky);padding:12px 14px;font-size:1rem}
+  .menu-theme{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:var(--sky);border:none;border-radius:10px;
+    padding:12px 14px;font-size:1rem;font-weight:600;color:var(--navy);cursor:pointer;font-family:inherit}
+  .hero{padding:46px 0 44px}
+  .hero .sub{font-size:1.15rem}
+  .hero-ctas .btn{flex:1 1 100%;justify-content:center}
+  .trust span{font-size:.85rem;padding:7px 12px}
+  .card{padding:24px 20px}
+  .ask-box{padding:22px 18px}
+  .ask-row .btn{flex:1 1 100%;justify-content:center}
+  .faq summary{padding:18px 18px;font-size:1.02rem}
+  .faq .a{padding:0 18px 20px}
+  form.req{padding:24px 18px}
+  .contact-card{padding:24px 20px}
+  .contact-card .big{font-size:1.2rem}
+  #adminPanel{padding:12px 8px}
+  .admin-card{padding:22px 16px}
+  .admin-actions .btn{flex:1 1 100%;justify-content:center}
+  .proj-edit{flex-direction:column}
+  .proj-edit img,.proj-edit .thumb{width:100%;height:auto;aspect-ratio:4/3;flex:none}
+  #adminBtn{padding:12px 18px;font-size:.92rem;right:12px;bottom:12px}
+  footer.site .cols{gap:22px}
 }
 </style>
 </head>
@@ -313,14 +352,16 @@ html[data-theme="dark"] .form-sent{background:#052E22;border-color:#065F46;color
         <span class="brand-sub">LAND SURVEYING &bull; BUNNELL &amp; PALM COAST, FL</span>
       </span>
     </a>
-    <nav class="main" aria-label="Main navigation">
+    <button id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="main" id="mainNav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact Us</a>
+      <button class="menu-theme" id="themeBtnMenu" type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themeLabelMenu">Dark mode</span></button>
     </nav>
     <a class="btn btn-call" data-tel href="tel:+13864372363">Call Now: <span data-phone>(386) 437-2363</span></a>
-    <button id="themeBtn" type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themeLabel">Dark</span></button>
+    <button id="themeBtn" type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themeLabel">Dark</span></button>
   </div>
 </header>
 
@@ -645,23 +686,44 @@ html[data-theme="dark"] .form-sent{background:#052E22;border-color:#065F46;color
 var LS_KEY = "swa-site-state-v1";
 /* Theme: visitor's saved choice, else their system preference */
 var themeBtn = document.getElementById("themeBtn");
+var themeBtnMenu = document.getElementById("themeBtnMenu");
 function setTheme(t){
   if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
   else document.documentElement.removeAttribute("data-theme");
-  if (themeBtn){
-    themeBtn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
-    themeBtn.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
-    var lbl = document.getElementById("themeLabel"); if (lbl) lbl.textContent = t === "dark" ? "Light" : "Dark";
-  }
+  [themeBtn, themeBtnMenu].forEach(function(b){
+    if (!b) return;
+    b.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
+    b.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  });
+  var lbl = document.getElementById("themeLabel"); if (lbl) lbl.textContent = t === "dark" ? "Light" : "Dark";
+  var lblM = document.getElementById("themeLabelMenu"); if (lblM) lblM.textContent = t === "dark" ? "Light mode" : "Dark mode";
 }
 var startTheme = "light";
 try { startTheme = localStorage.getItem("swa-theme") || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); } catch(e){}
 setTheme(startTheme);
-if (themeBtn) themeBtn.addEventListener("click", function(){
+function toggleTheme(){
   var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
   setTheme(next);
   try { localStorage.setItem("swa-theme", next); } catch(e){}
-});
+}
+if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
+if (themeBtnMenu) themeBtnMenu.addEventListener("click", toggleTheme);
+/* Mobile menu: nav + theme toggle live inside the menu on phones */
+var menuBtn = document.getElementById("menuBtn");
+var siteHeader = document.querySelector("header.site");
+function closeMenu(){ if (siteHeader) siteHeader.classList.remove("menu-open"); if (menuBtn) menuBtn.setAttribute("aria-expanded", "false"); }
+if (menuBtn && siteHeader) {
+  menuBtn.addEventListener("click", function(){
+    var open = siteHeader.classList.toggle("menu-open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  document.querySelectorAll("nav.main a").forEach(function(a){ a.addEventListener("click", closeMenu); });
+  document.addEventListener("click", function(e){
+    if (siteHeader.classList.contains("menu-open") && !siteHeader.contains(e.target)) closeMenu();
+  });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
+}
 var defaultState = JSON.parse(document.getElementById("swa-data").textContent);
 var state = defaultState;
 try {
